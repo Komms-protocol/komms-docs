@@ -1,8 +1,8 @@
 # How Komms works
 
-Your device encrypts, independent operators deliver and store, Kaspa keeps the order, and a Bittensor subnet pays the operators.
+Your device encrypts, independent operators deliver and store, Kaspa keeps the order, and Bittensor subnet 27 pays the operators.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 Komms is built on open networks rather than one company's data centre. Each part has one job.
 
@@ -12,8 +12,8 @@ Komms is built on open networks rather than one company's data centre. Each part
 | **Relays** | Deliver messages to everyone in a conversation, straight away. |
 | **Storage** | Holds encrypted files and backups, starting with Hippius. |
 | **Kaspa** | Records your identity and fingerprints of your messages, so their order and authorship can be checked. |
-| **The Komms subnet on Bittensor** | Recruits the operators who run relays, indexes and storage, checks their work, and pays them. |
-| **Komms Systems** | The company: builds the apps, sells plans and runs the services listed in [What Komms runs today](what-we-run.md). |
+| **Bittensor subnet 27** | Recruits the operators who run relays, indexes and storage, checks their work, and pays them. |
+| **Komms Systems** | The company: builds the apps, sells plans and runs the services listed in [What the team still runs](what-we-run.md). |
 
 ## Two lanes: fast delivery, slow proof
 
@@ -28,12 +28,12 @@ Your account's identity is a small contract on the Kaspa network that only your 
 
 ## Who runs the network
 
-Operators run Komms services and are paid through the Komms subnet on Bittensor:
+Operators run Komms services and are paid through [Bittensor subnet 27](https://taostats.io/subnets/27):
 
 - **Miners** run a Kaspa node plus Komms services: indexing (tracking identities and anchors), storing, and relaying messages.
 - **Validators** check miners' work against Kaspa, with test messages and spot checks, and set how rewards are shared.
 
-Operators pay the small Kaspa fees for sponsored anchors up front and are repaid through the subnet's emissions. Komms uses subscription revenue to buy back the subnet's alpha token, which covers those emissions, so paying customers fund the network. See [Mining on Komms](../mining-and-validating/mining.md).
+A miner that sponsors an anchor pays the small Kaspa fee up front. At least a quarter of subscription revenue purchases subnet 27 alpha, and miners are repaid from that alpha at the cost of the fees they paid. The subnet's emissions are a separate reward for scored work. Paying customers fund the fee repayment. Emissions are not Komms revenue. See [Mining on Komms](../mining-and-validating/mining.md).
 
 ## Checking for yourself
 

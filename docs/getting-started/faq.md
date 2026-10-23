@@ -2,7 +2,7 @@
 
 Short answers to the questions people ask most about Komms.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 ## Do my staff or members need crypto?
 
@@ -42,7 +42,7 @@ Sign in on another device with a synced passkey, or use your [recovery kit](../s
 
 ## What happens if Komms shuts down?
 
-Your identity lives on Kaspa, not in a Komms database, and you can keep a verifiable [export of your history](../using-komms/export-your-history.md). Some services are still run by the Komms team at launch, and those would be affected. See [What Komms runs today](../network/what-we-run.md).
+Your identity lives on Kaspa, not in a Komms database, and you can keep a verifiable [export of your history](../using-komms/export-your-history.md). Some services are still run by the Komms team at launch, and those would be affected. See [What the team still runs](../network/what-we-run.md).
 
 ## Can I move my community from Discord or Telegram?
 
@@ -50,7 +50,7 @@ There's no automatic import at launch. On the Large communities plan, we help yo
 
 ## Is Komms on mainnet?
 
-Not yet. See [Network status](../network/network-status.md) for where things stand.
+The operator network is. Komms is [Bittensor mainnet subnet 27](https://taostats.io/subnets/27). The app is still preparing for its public beta, on Kaspa testnet-10, and moves to Kaspa mainnet with that beta. See [Network status](../network/network-status.md).
 
 ## How do I contact you?
 

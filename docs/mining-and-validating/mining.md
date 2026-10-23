@@ -1,8 +1,8 @@
 # Mining on Komms
 
-What Komms miners do, how they're scored and paid, and how to join the waitlist while onboarding opens.
+What Komms miners do on Bittensor subnet 27, how they're scored and paid, and how to join the waitlist while onboarding opens.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 > [!NOTE]
 > **Coming soon.** We'll be releasing the miner onboarding process soon. We're onboarding a small first group of miners to test the set-up end to end before we publish the guide. **[Join the miner waitlist](https://komms.app/?intent=miner&src=docs-mining#start)** and we'll tell you as soon as it opens.
@@ -30,9 +30,9 @@ Failing a critical check can't be made up for by doing well on another. Message 
 
 ## How miners are paid
 
-- **Rewards** come from the Komms subnet's emissions on Bittensor, shared according to validators' scores.
-- **Fees:** a miner that sponsors anchors pays the Kaspa fees up front and is repaid through emissions.
-- **Buybacks:** Komms uses subscription revenue to buy back alpha, which covers the emissions paid to miners, so paying customers fund the network.
+- **Fee repayment.** A miner that sponsors anchors pays the Kaspa fees up front. At least a quarter of subscription revenue purchases subnet 27 alpha, and miners are repaid from that alpha at the cost of those fees, against a published ledger.
+- **Rewards** come from subnet 27 emissions, shared according to validators' scores. That reward is separate from fee repayment. Emissions are not Komms revenue.
+- **What is live.** Scoring has been run on the Bittensor test network. This page does not claim that registering on subnet 27 today earns Komms rewards. The launch requirement is on [Network status](../network/network-status.md).
 
 ## What you'll need
 
@@ -40,4 +40,4 @@ Hardware and set-up details will be published with the guide. Expect a Linux ser
 
 ## Get notified
 
-**[Join the miner waitlist](https://komms.app/?intent=miner&src=docs-mining#start)**. See also the [Bittensor subnet page](https://komms.app/subnet).
+**[Join the miner waitlist](https://komms.app/?intent=miner&src=docs-mining#start)**. Subnet 27 on Taostats: [taostats.io/subnets/27](https://taostats.io/subnets/27).

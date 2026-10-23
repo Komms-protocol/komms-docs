@@ -2,7 +2,7 @@
 
 Exactly what the Kaspa network, operators, storage providers, Komms and other members can and can't learn.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 Encryption hides what you say in private conversations. Some information about your activity is still visible to the people and systems that make Komms work. Here's who can see what.
 
@@ -10,8 +10,8 @@ Encryption hides what you say in private conversations. Some information about y
 | --- | --- | --- |
 | Anyone looking at Kaspa | That your identity exists; how many messages you anchored, and when; fingerprints of those messages | Message content, who you wrote to, which conversations |
 | Relay operators | That your account sent something to a conversation, its size and when | Content of private messages |
-| Storage providers | Encrypted files, their size and when they were stored | File contents in private conversations |
-| Komms (storage records) | Which workspace or person each stored file is charged to, its size and type of storage | File contents in private conversations |
+| Storage providers | Encrypted files, their size and when they were stored. Files in public channels are not encrypted | File contents in private conversations |
+| Komms (storage records) | Which identity charged a file, which workspace or person it is billed to, its size, its storage class, and a blinded conversation tag. Released rows are cleared 30 days after the file is deleted | File contents in private conversations, and which room a blinded tag belongs to |
 | Komms (sign-up checks) | Your email address, used to check your sign-up | Your messages |
 | Members of a conversation | Everything sent in it after they joined | Private conversations they're not in |
 | Anyone | Everything in a public channel | Private channels, direct messages, group chats |

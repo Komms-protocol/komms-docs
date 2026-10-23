@@ -2,7 +2,7 @@
 
 Give people the right permissions, keep conversations on track, and understand how moderation decisions take effect.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 Roles decide who can do what in a workspace or server. Moderation tools keep conversations healthy.
 

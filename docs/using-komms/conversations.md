@@ -1,8 +1,8 @@
 # Channels, messages and replies
 
-How conversations work in Komms, from channels and threads of replies to edits, deletes, reactions and pins.
+How conversations work in Komms, from channels and replies to edits, deletes, reactions and pins.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 Every conversation in Komms works the same way, whether it's a channel, a direct message or a group chat. The same tools are available everywhere.
 

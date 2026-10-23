@@ -1,8 +1,33 @@
-# Komms documentation
+# Komms
 
-Komms is one secure app for teams and communities: chat, files and decisions, end-to-end encrypted, with sign-in by passkey. **Komms Business** is priced per workspace and **Komms Community** per server, never per seat. The network behind it uses Kaspa for ordering and a Bittensor subnet for the operators who run it.
+Komms is one secure app for teams and communities, and **Bittensor mainnet subnet 27**, the subnet that pays the operators who run it. Chat, files and decisions are end-to-end encrypted. Sign-in is by passkey. Kaspa records each identity and the order of events. Subnet 27 checks the operators and pays them.
 
-These are the guides published at **[komms.app/docs](https://komms.app/docs)**, as plain Markdown. They describe Komms as it will work at its public beta launch; anything still on the way is marked "coming soon".
+**Komms Business** is priced per workspace and **Komms Community** per server, never per seat.
+
+This repository is the public documentation. The same guides are published at **[komms.app/docs](https://komms.app/docs)**. They describe Komms as it will work at its public beta. Anything still on the way is marked "coming soon".
+
+## Status
+
+22 October 2026. Written by hand, not a live monitor.
+
+| | |
+| --- | --- |
+| **Subnet** | [Bittensor mainnet, netuid 27](https://taostats.io/subnets/27) |
+| **App** | Public beta in preparation, on Kaspa testnet-10 |
+| **Plans** | [Published](docs/getting-started/plans-and-pricing.md). Not on sale yet |
+| **Operators** | Onboarding is opening. The setup guide follows the first group |
+
+The full report is [Network status](docs/network/network-status.md).
+
+## What subnet 27 does
+
+Independent operators run the network. Komms does not run it as one company's service.
+
+- **Miners** run a Kaspa node and Komms services: indexing identities and anchors, storing encrypted data, and relaying messages. A miner that sponsors an anchor pays the Kaspa fee up front.
+- **Validators** recompute the truth from their own Kaspa node, test miners, and set weights on subnet 27. A validator does not serve users, and it does not score a miner it controls.
+- **Payment.** At least a quarter of subscription revenue purchases subnet 27 alpha. Miners are repaid from that alpha at the cost of the fees they paid, against a published ledger. The subnet's emissions are a separate reward for scored work. Emissions are not Komms revenue.
+
+See [How Komms works](docs/network/how-komms-works.md), [Mining on Komms](docs/mining-and-validating/mining.md) and [Validating](docs/mining-and-validating/validating.md).
 
 ## Contents
 
@@ -18,7 +43,7 @@ These are the guides published at **[komms.app/docs](https://komms.app/docs)**, 
 
 ### Using Komms
 
-- [Channels, messages and replies](docs/using-komms/conversations.md): How conversations work in Komms, from channels and threads of replies to edits, deletes, reactions and pins.
+- [Channels, messages and replies](docs/using-komms/conversations.md): How conversations work in Komms, from channels and replies to edits, deletes, reactions and pins.
 - [Direct messages and groups](docs/using-komms/direct-messages.md): Private one-to-one and group conversations, end-to-end encrypted, with the same tools as channels.
 - [Files and storage](docs/using-komms/files-and-storage.md): How files are encrypted and stored, how storage is counted, how long files are kept and what happens when a plan ends.
 - [Roles and moderation](docs/using-komms/roles-and-moderation.md): Give people the right permissions, keep conversations on track, and understand how moderation decisions take effect.
@@ -37,15 +62,15 @@ These are the guides published at **[komms.app/docs](https://komms.app/docs)**, 
 
 ### The network
 
-- [How Komms works](docs/network/how-komms-works.md): Your device encrypts, independent operators deliver and store, Kaspa keeps the order, and a Bittensor subnet pays the operators.
+- [How Komms works](docs/network/how-komms-works.md): Your device encrypts, independent operators deliver and store, Kaspa keeps the order, and Bittensor subnet 27 pays the operators.
 - [Whitepaper and papers](docs/network/papers.md): The Komms whitepaper, the technical overview and the roadmap, ready to download.
 - [Roadmap](docs/network/roadmap.md): What ships at launch, what follows in the weeks after, and the longer path from messaging to AI coordination and proving.
-- [What Komms runs today](docs/network/what-we-run.md): The services and keys the Komms team still runs on its own at launch, why, and what replaces each one.
-- [Network status](docs/network/network-status.md): Where Komms stands today, updated by hand. Last report 21 October 2026.
+- [What the team still runs](docs/network/what-we-run.md): The services and keys the Komms team still runs at the public beta, why, and what replaces each one.
+- [Network status](docs/network/network-status.md): Where Komms stands today, updated by hand. Last report 22 October 2026.
 
 ### Mining & validating
 
-- [Mining on Komms](docs/mining-and-validating/mining.md): What Komms miners do, how they're scored and paid, and how to join the waitlist while onboarding opens.
+- [Mining on Komms](docs/mining-and-validating/mining.md): What Komms miners do on subnet 27, how they're scored and paid, and how to join the waitlist while onboarding opens.
 - [Validating](docs/mining-and-validating/validating.md): What Komms validators do, and why launch needs an independently run validator.
 
 ### Build on Komms

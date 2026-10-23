@@ -2,7 +2,7 @@
 
 One secure app for teams and communities. Chat, share files and make decisions, end-to-end encrypted, on a network no single company controls.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 Komms is a messaging app for teams and communities. It does the everyday jobs of a chat tool (channels, direct messages, replies, reactions and file sharing) with two big differences:
 
@@ -24,7 +24,7 @@ Both use the same app and the same account. Read [Komms Business or Komms Commun
 
 - **Sign in with a passkey.** No password to leak or phish. See [Create your account](create-your-account.md).
 - **Flat pricing.** One price per workspace or server, with no per-seat fees and no member limits. See [Plans and pricing](plans-and-pricing.md).
-- **A network, not a data centre.** Messages are relayed and files stored by independent operators, who are paid through a Bittensor subnet. Kaspa keeps the order of events. See [How Komms works](../network/how-komms-works.md).
+- **A network, not a data centre.** Messages are relayed and files stored by independent operators, who are paid through Bittensor subnet 27. Kaspa keeps the order of events. See [How Komms works](../network/how-komms-works.md).
 - **Proof you can keep.** Every person's messages are anchored on Kaspa, so a conversation's history can be checked without trusting Komms. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
 
 > [!NOTE]
