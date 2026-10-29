@@ -1,27 +1,27 @@
-# What Komms runs today
+# What Komms runs
 
-The services and keys the Komms team still runs on its own at launch, why, and what replaces each one.
+The launch design's team-controlled services, their failure effects and the evidence needed to reduce that dependence.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
-Komms is designed so no single company controls it. At launch, some parts are still run by the Komms team alone. We list them here so you know where you're relying on us.
+These are dependencies in the launch design, not a claim that all launch services are deployed. [Network status](network-status.md) is the dated operating record.
 
-| Area | What the team runs | What it means for you | Moving towards |
+| Area | Team responsibility | Dependency or failure effect | Evidence needed for less dependence |
 | --- | --- | --- | --- |
-| Storage | The storage provider account and the ledger that counts storage per workspace | If it's down, new uploads pause; reading files carries on | More storage operators |
-| Public records | The service that publishes each identity's public records | If it falls behind, records publish late; your devices keep working | Anyone can publish the same records |
-| Sign-up checks | Email and device checks at sign-up | Komms sees your email address | An agreed independent check |
-| Plans and billing | The service that issues plan entitlements, and the card payments account | Plan changes depend on it | Production keys held by more than one person |
-| Network keys | Keys for the operator roster, registry and treasury | Mistakes or theft could affect operators | Two-of-three custody before mainnet |
-| Buybacks | Using subscription revenue to buy back alpha that covers miners' emissions | Miner repayments depend on it | Two-of-three custody, checked independently |
-| Releases | Signing the desktop apps; hosting komms.app | You trust that a release really comes from us | Signed, verifiable releases |
+| Storage | Provider account, upload admission and storage ledger | Uploads and allowance changes depend on admission; reads also depend on the provider remaining available and paid | Independently operated storage and recovery drills |
+| Public records | One publisher, public-read bucket and same-host mirror | Delayed or unavailable records can prevent fresh history checks; the mirror is not independent redundancy | Independent publication and retrieval demonstrated |
+| Sign-up | Email verification, proof-of-work admission and mint binding | New sponsored identities depend on this service; it sees submitted verification data | A separately operated admission path meeting the same checks |
+| Plans and billing | Payment account and signed entitlements | Purchases, renewals and entitlement changes depend on these services | Qualified production custody and documented recovery |
+| Network authorities | Operator roster, registry and treasury keys | Compromise or mistakes can affect admission, spending and operator treatment | Production key ceremony and tested authority recovery |
+| Operator programme | Revenue-funded alpha purchases, audited repayment and published allotments | Funding, liquidity and claim processing can limit repayments | Launch two-of-three signing, independent cost audit and reconciled public ledgers |
+| Releases and website | Build publication, desktop signing and website hosting | Users depend on authentic downloads and the update channel | Verified release provenance, platform signing and recovery checks |
 
-## What the team can't do
+## Limits of those powers
 
-- Read your private messages or files
-- Take over your identity or move its value; only your keys and your recovery kit can
-- Change your history after it's anchored on Kaspa
+These services do not receive private-message decryption keys through normal operation, and the team cannot authorise a spend of a user's identity without that user's keys. Operators still see metadata and may withhold service. A compromised client release or user device is a separate threat.
 
-## How we'll keep this page honest
+An accepted anchor cannot simply be edited by a storage operator. Retrieving its message body and checking its history still requires the relevant data and verification dependencies. See [What others can see](../security-and-privacy/what-others-can-see.md).
 
-Each item comes off this list once an independent alternative is running. This page is updated when that happens. The team keeps a fuller technical inventory; ask at [info@komms.app](mailto:info@komms.app) if you need detail.
+## Keeping the inventory current
+
+Remove a dependency only after a working alternative has been demonstrated. Changes to control, custody or availability belong here and in the dated status record. Questions about these dependencies can be sent to [info@komms.app](mailto:info@komms.app).

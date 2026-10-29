@@ -2,7 +2,10 @@
 
 Create a Komms Community server, open public and invite-only channels, and grow without per-member fees.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 A server is your community's home in Komms. It can be open to anyone or kept to the people you invite.
 

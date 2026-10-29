@@ -2,7 +2,10 @@
 
 What closing your Komms account does, what it can't undo, and what to do first.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Closing your account is permanent. Read this page before you do it.
 

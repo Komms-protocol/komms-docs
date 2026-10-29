@@ -1,25 +1,30 @@
-# Validating
+# Validating on Komms
 
-What Komms validators do, and why launch needs an independently run validator.
+How validators check service and what independent operation must demonstrate.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
 > [!NOTE]
-> **Coming soon.** Validator onboarding opens after the first miners. **[Apply to validate](https://komms.app/?intent=miner&src=docs-validating#start)** and we'll be in touch.
+> General validator onboarding is not open yet. The initial mechanism and operator package still need qualification. See [Network status](../network/network-status.md).
 
-## What validators do
+## Validator responsibilities
 
-Validators keep the network honest. They never serve users. Instead they:
+Validators derive a chain view from their own Kaspa node, probe miner capabilities, audit sponsored costs and publish Bittensor weights. They do not serve ordinary user requests.
 
-- **Work out the truth from Kaspa** on their own node
-- **Test miners** with test messages, history checks and storage spot checks
-- **Audit sponsored anchors** from chain data, checking fees and limits
-- **Set weights** on Bittensor, which decide how rewards are shared
+The initial scoring stage is index-only. Storage, serving and later proving require their own qualified probes before receiving credit. Claims of measured work need reproducible inputs, probe results and the resulting weights.
 
-## Why independence matters
+A cost auditor must compare a claim with node-derived transactions, fees, eligibility and limits. The claimant's own ledger is not sufficient independent evidence.
 
-No validator scores a miner it controls. Launch requires at least **two independently run validators**, so no single party decides rewards.
+## Independence and influence
+
+Launch requires a second, independently operated validator. Common-control declarations and separate hosts help review ownership, but neither proves independence by itself.
+
+A validator must not score a miner it controls. Operating keys, node access, administration and scoring must be separated in practice. Bittensor's stake and weight rules still determine each validator's influence; adding a second validator does not guarantee balanced power or prevent collusion.
+
+## Before publishing weights
+
+The release must identify the intended network and subnet, reproduce scores from recorded inputs, bound sponsorship and stipend budgets, handle unavailable or dishonest miners and show how operators recover after interruption. Weight publication must be explicitly enabled after those checks; ordinary installation should not publish it.
 
 ## Get involved
 
-**[Apply to validate](https://komms.app/?intent=miner&src=docs-validating#start)**. See also the [Bittensor subnet page](https://komms.app/subnet).
+Contact [info@komms.app](mailto:info@komms.app) with your validator experience and proposed independent operating arrangement. Do not send private key material. Read [Incentives and funding](../network/incentives.md) and [What Komms runs](../network/what-we-run.md) before committing resources.

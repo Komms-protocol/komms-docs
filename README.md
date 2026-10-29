@@ -1,69 +1,99 @@
-# Komms documentation
+# Komms
 
-Komms is one secure app for teams and communities: chat, files and decisions, end-to-end encrypted, with sign-in by passkey. **Komms Business** is priced per workspace and **Komms Community** per server, never per seat. The network behind it uses Kaspa for ordering and a Bittensor subnet for the operators who run it.
+Komms is building private messaging for teams and communities, with user-held
+identities on Kaspa and a Bittensor subnet for the operators who deliver,
+index and store the work.
 
-These are the guides published at **[komms.app/docs](https://komms.app/docs)**, as plain Markdown. They describe Komms as it will work at its public beta launch; anything still on the way is marked "coming soon".
+[Website](https://komms-landing-landing-page.up.railway.app/) ·
+[Subnet 27 on Taostats](https://taostats.io/subnets/27/) ·
+[Network status](docs/network/network-status.md) ·
+[Whitepaper and papers](docs/network/papers.md)
 
-## Contents
+> **Development stage:** Komms is preparing its public beta. The recorded
+> deployment is on Kaspa Testnet 10 and Bittensor testnet subnet 503.
+> Mainnet subnet 27 is the intended production subnet; ownership of that slot
+> does not establish that the Komms incentive mechanism is operating there.
+> [Current status and launch gates](docs/network/network-status.md).
 
-### Getting started
+## The product and its demand
 
-- [What is Komms](docs/getting-started/what-is-komms.md): One secure app for teams and communities. Chat, share files and make decisions, end-to-end encrypted, on a network no single company controls.
-- [Komms Business or Komms Community?](docs/getting-started/business-or-community.md): Workspaces are for teams that work together. Servers are for communities that gather around something. Here's how to choose.
-- [Create your account](docs/getting-started/create-your-account.md): Sign up with your email, sign in with a passkey, and save your recovery kit. Your Komms identity is created the first time you do something.
-- [Set up your first workspace](docs/getting-started/first-workspace.md): Create a Komms Business workspace, add channels, invite your team and choose a plan.
-- [Start your first community server](docs/getting-started/first-community.md): Create a Komms Community server, open public and invite-only channels, and grow without per-member fees.
-- [Plans and pricing](docs/getting-started/plans-and-pricing.md): One flat price per workspace or server, paid yearly or monthly. No per-seat fees and no member limits.
-- [FAQ](docs/getting-started/faq.md): Short answers to the questions people ask most about Komms.
+Komms Business serves teams in a workspace; Komms Community serves communities
+in a server. The planned product combines channels, direct messages and files,
+with passkey sign-in and pricing per workspace or server rather than per seat.
+Private message bodies are encrypted on the user's device.
 
-### Using Komms
+Product activity creates the infrastructure workload: relays deliver signed
+messages, indexers track identity and anchoring state, and storage operators
+retain encrypted objects. Kaspa records identity changes and message
+commitments. The message body stays off chain.
 
-- [Channels, messages and replies](docs/using-komms/conversations.md): How conversations work in Komms, from channels and threads of replies to edits, deletes, reactions and pins.
-- [Direct messages and groups](docs/using-komms/direct-messages.md): Private one-to-one and group conversations, end-to-end encrypted, with the same tools as channels.
-- [Files and storage](docs/using-komms/files-and-storage.md): How files are encrypted and stored, how storage is counted, how long files are kept and what happens when a plan ends.
-- [Roles and moderation](docs/using-komms/roles-and-moderation.md): Give people the right permissions, keep conversations on track, and understand how moderation decisions take effect.
-- [Web, desktop and mobile apps](docs/using-komms/apps.md): Use Komms in your browser or as a desktop app at launch. Mobile apps, push notifications and calls follow soon after.
-- [Your Komms wallet](docs/using-komms/wallet.md): A built-in Kaspa wallet to see your balance, receive and send KAS, and pay network fees yourself if you want to.
-- [Export your history](docs/using-komms/export-your-history.md): Download a complete copy of your conversations that you, or anyone you share it with, can check against the Kaspa network.
-- [Close your account](docs/using-komms/close-your-account.md): What closing your Komms account does, what it can't undo, and what to do first.
+The first release focuses on messaging. Calls, mobile apps, developer services
+and proving are separate roadmap stages. See the [product guides](docs/README.md)
+and [roadmap](docs/network/roadmap.md).
 
-### Security & privacy
+## What the subnet measures
 
-- [How encryption works](docs/security-and-privacy/how-encryption-works.md): What end-to-end encryption protects in Komms, where post-quantum protection applies, and what encryption can't hide.
-- [Message delivery and anchoring](docs/security-and-privacy/delivery-and-anchoring.md): Messages arrive instantly. A few hours later they're anchored on Kaspa, so anyone can check who sent what, and in what order.
-- [Your recovery kit](docs/security-and-privacy/recovery-kit.md): The recovery kit is full control of your Komms account. Here's how to keep it safe, use it, and replace it if it's lost.
-- [What others can see](docs/security-and-privacy/what-others-can-see.md): Exactly what the Kaspa network, operators, storage providers, Komms and other members can and can't learn.
-- [Privacy notice](docs/security-and-privacy/privacy-notice.md): How komms.app handles information when you visit the site and sign up for early access.
+Miners provide services. Validators check their work against their own Kaspa
+node and run known-answer journeys, retrieval checks and sponsorship audits.
+The required probe set determines which capabilities earn score. A capability
+that has no required measurement earns no score.
 
-### The network
+The current qualification stage is index-first. Store, serve and v4 relay
+scoring require their own activation and acceptance evidence; a role in the
+architecture diagram is not evidence that its scoring is live.
 
-- [How Komms works](docs/network/how-komms-works.md): Your device encrypts, independent operators deliver and store, Kaspa keeps the order, and a Bittensor subnet pays the operators.
-- [Whitepaper and papers](docs/network/papers.md): The Komms whitepaper, the technical overview and the roadmap, ready to download.
-- [Roadmap](docs/network/roadmap.md): What ships at launch, what follows in the weeks after, and the longer path from messaging to AI coordination and proving.
-- [What Komms runs today](docs/network/what-we-run.md): The services and keys the Komms team still runs on its own at launch, why, and what replaces each one.
-- [Network status](docs/network/network-status.md): Where Komms stands today, updated by hand. Last report 21 October 2026.
+```mermaid
+flowchart LR
+    App[Komms app] -->|Signed envelopes and encrypted objects| Miners[Miners: relay, index, store]
+    Miners -->|Identity updates and message commitments| Kaspa[Kaspa]
+    Validators[Validators] -->|Check against own node| Kaspa
+    Validators -->|Probe required work| Miners
+    Validators -->|Submit weights| Bittensor[Bittensor]
+    Bittensor -->|Subnet rewards| Miners
+```
 
-### Mining & validating
+This is the target service model. Deployment and qualification are recorded in
+[Network status](docs/network/network-status.md), with operator roles and
+limits in [Mining](docs/mining-and-validating/mining.md) and
+[Validating](docs/mining-and-validating/validating.md).
 
-- [Mining on Komms](docs/mining-and-validating/mining.md): What Komms miners do, how they're scored and paid, and how to join the waitlist while onboarding opens.
-- [Validating](docs/mining-and-validating/validating.md): What Komms validators do, and why launch needs an independently run validator.
+## Rewards, costs and customer revenue
 
-### Build on Komms
+The launch design separates three flows:
 
-- [Build on Komms](docs/build/developers.md): Komms Publish, Komms RPC and the protocol for builders. Coming after launch.
+- **Subnet rewards:** Bittensor distributes native rewards using validator
+  weights. Fees, message volume and wallet balances are not score inputs.
+- **Audited cost repayment:** operators front eligible Kaspa fees from their
+  own wallets. The planned operator programme repays accepted claims in alpha
+  from a separately funded pot, within audited limits.
+- **Customer revenue:** subscriptions fund service costs and the operator
+  program. The adopted funding policy allocates 25% of the previous month's
+  gross revenue to operator-program alpha purchases.
 
-### Papers
+An alpha purchase is not subscription revenue or a native emission payment.
+The repayment programme is a launch design, not an operating payment history.
+Read [Incentives and funding](docs/network/incentives.md) for the mechanism,
+controls and remaining acceptance work.
 
-- [komms-roadmap.pdf](papers/komms-roadmap.pdf)
-- [komms-technical-overview.pdf](papers/komms-technical-overview.pdf)
-- [komms-whitepaper-v0.3.pdf](papers/komms-whitepaper-v0.3.pdf)
+## Review the network
 
-## Get involved
+| Question | Start here |
+| --- | --- |
+| What is deployed and what still has to pass? | [Network status](docs/network/network-status.md) |
+| How do delivery, identities and anchors fit together? | [How Komms works](docs/network/how-komms-works.md) |
+| What is measured, planned or not yet demonstrated? | [Evidence and claim boundaries](docs/network/evidence.md) |
+| Which services and keys remain team-operated? | [Operating responsibilities](docs/network/what-we-run.md) |
+| What can operators and chain observers see? | [Privacy boundaries](docs/security-and-privacy/what-others-can-see.md) |
+| What does the longer-term thesis cover? | [Whitepaper and papers](docs/network/papers.md) |
+| How can an operator participate? | [Mining](docs/mining-and-validating/mining.md) and [validating](docs/mining-and-validating/validating.md) |
+| How will people use the app? | [All guides](docs/README.md) |
 
-- Spotted a mistake or something unclear? Open an issue or a pull request; see [CONTRIBUTING.md](CONTRIBUTING.md).
-- Security problem? Please report it privately; see [SECURITY.md](SECURITY.md).
-- Anything else: [info@komms.app](mailto:info@komms.app).
+## Contact and contributions
 
-## Licence
+Contact [info@komms.app](mailto:info@komms.app) for operator onboarding,
+technical questions or investor materials. Documentation corrections are
+welcome through [issues and pull requests](CONTRIBUTING.md). Report security
+vulnerabilities through the private route in [SECURITY.md](SECURITY.md).
 
-The documentation is licensed under the Creative Commons Attribution-ShareAlike 4.0 International licence (CC-BY-SA 4.0). See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+The documentation and papers are licensed under [CC BY-SA 4.0](LICENSE).
+The Komms name and logo remain trademarks; see [NOTICE](NOTICE).

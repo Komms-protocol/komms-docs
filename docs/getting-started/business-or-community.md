@@ -2,7 +2,10 @@
 
 Workspaces are for teams that work together. Servers are for communities that gather around something. Here's how to choose.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Komms comes in two flavours. They share one app and one account, so you can belong to a company workspace and a few community servers at the same time.
 

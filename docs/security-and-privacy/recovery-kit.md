@@ -1,44 +1,43 @@
 # Your recovery kit
 
-The recovery kit is full control of your Komms account. Here's how to keep it safe, use it, and replace it if it's lost.
+What the kit controls, how it differs from a history backup, and what to do if it is lost or exposed.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
-Your recovery kit is the master key to your account. You save it when your identity is first created, and Komms never holds a copy.
+> [!NOTE]
+> This guide describes the public-beta design. See [Network status](../network/network-status.md) for availability and qualification.
+
+The recovery kit contains your identity's recovery secret, covenant identifier and template version. The secret is generated independently of the device's master seed. Komms does not hold a copy.
 
 > [!WARNING]
-> Anyone who holds your recovery kit can take over your account immediately, close it, and move the value it holds. There is no waiting period that protects you from someone who has your kit.
+> Anyone holding the kit can immediately replace the identity's owner key or close the identity. This can put the account and its value under their control. There is no protective waiting period for use of the kit.
 
 ## Keep it safe
 
-- Store it **offline**: printed, or in a password manager you trust.
-- Never paste it into a website, a chat or an email. Komms will never ask for it.
-- Don't keep it on the same device you use Komms on.
+- Keep an offline copy, or use a password manager you trust.
+- Keep a copy separate from the device you use for Komms.
+- Never send it in a chat, email or support request. Enter it only in the trusted account-recovery flow.
 
-## Getting back in
+## Account control and old history
 
-- **New phone or laptop?** Sign in with a synced passkey if you have one.
-- **Lost every device?** Use your recovery kit to restore your account on a new device. Your history comes back from your encrypted backup, for messages still within their retention period in conversations that allow backups. Public channels can be read again as normal.
+On a new device, a synced passkey may restore access to your encrypted seed vault, depending on the device and passkey provider. Check that your history and keys have actually been restored before discarding another device.
 
-## If you lose your kit but can still sign in
+If every device is lost, the recovery kit can restore **identity control** onto a new master seed. It cannot recover old history by itself. Old backups still need their old archive key, derived from the old master seed, and the backup bytes must remain available within their retention period.
 
-You can replace a lost kit, but it takes **14 days**:
+Keep an [export](../using-komms/export-your-history.md) of important history. Identity recovery, backup restoration and export verification are different operations.
 
-1. Start the replacement from a signed-in device. Your other devices are warned.
-2. Keep using Komms as normal while you wait.
-3. After 14 days, confirm the replacement and save the new kit.
+## Lost kit, signed-in device available
 
-Replacing a kit needs a small deposit, which you get back when you confirm, plus two small network fees that you pay yourself. If someone holding your old kit tries to take over during the wait, they can. The wait is there to stop you being locked out, not to stop a thief.
+The design allows a signed-in owner to propose a replacement kit. Confirmation requires the recovery ticket to reach the protocol's 14-day delay. The device warns other signed-in devices of the proposal.
 
-## If your kit is stolen
+Replacement needs a deposit, returned on confirmation, and user-paid network fees. The holder of the old kit can still recover the identity during the delay. The delay protects against an unauthorised replacement proposal; it does not protect an exposed kit.
 
-If someone else may have your recovery words, act quickly:
+## Exposed kit or compromised device
 
-- Move what you need out of your account and [export your history](../using-komms/export-your-history.md).
-- Start a **new identity**. Changing keys within an identity whose recovery words are known to someone else doesn't make it safe again.
+If you still hold both the current kit and owner key, the protocol supports replacing the recovery key immediately using both signatures. A compromised device also exposes its master seed: recovering onto a fresh seed is required to remove that access. Rotating to another key derived from the exposed seed is insufficient.
 
-Recovery onto completely fresh keys, without starting a new identity, is **coming soon**.
+These are sensitive account operations. Follow the released client's recovery instructions and verify the new state before relying on it. [Contact Komms](mailto:info@komms.app) for help, without sending any secret material.
 
 ## Recovery costs
 
-Komms covers the network cost of one recovery per account every 30 days. Further recoveries in that period, and replacing a lost kit, are paid by you from your [wallet](../using-komms/wallet.md).
+The launch policy sponsors one recovery per identity in 30 days. Further recoveries and lost-kit replacement are user-paid. Sponsorship does not remove the need for a valid signature or make old backups decryptable.

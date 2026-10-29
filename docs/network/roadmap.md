@@ -1,42 +1,43 @@
 # Roadmap
 
-What ships at launch, what follows in the weeks after, and the longer path from messaging to AI coordination and proving.
+Launch targets and the later services proposed for the same network.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
 
-Komms launches as a public beta. Work is split into what ships at launch, what follows inside the launch window, and what comes after.
+The first public release is planned as a beta. This page describes scope, not a release date or evidence that a feature is live. [Network status](network-status.md) records operating readiness.
 
-## At launch
+## Public-beta targets
 
-- Messaging for teams and communities, on the web and as desktop apps for macOS and Windows
-- Instant delivery with anchoring on Kaspa
-- Accounts you control, with passkeys and a recovery kit
-- Verifiable history and full export
-- Plans billed on the web, with storage allowances
-- Independent miners and a second, independently run validator on the Komms subnet
+- Messaging for teams and communities, through web and desktop clients
+- Off-chain delivery with commitments anchored on Kaspa
+- User-controlled identities, passkeys and a separate recovery kit
+- History export with explicit verification and recovery limits
+- Web-billed plans and enforced storage allowances
+- Three independent miners, a second independent validator and a qualified operator package
 
-## In the launch window (coming soon)
+Desktop distribution also requires the relevant platform signing and release checks. No fixed waiting period substitutes for evidence that the integrated journeys work.
+
+## Later planned work
 
 - iOS and Android apps with push notifications
-- Voice and video calls, end-to-end encrypted
+- End-to-end encrypted voice and video
 - File transfers with expiring links
-- Paying in KAS
-- Search across your full local history
-- A web portal for miners
+- Paying for plans in KAS
+- Search across full local history
+- A miner portal
+- Enterprise administration, single sign-on and compliance export
+- Komms Publish for other applications using the network
+- Metered Komms RPC
 
-## After launch
+These features have separate implementation and operating gates. They are not included as present capabilities or current revenue.
 
-- Enterprise features, such as single sign-on and compliance export
-- **Komms Publish**: build your own app on the Komms network
-- **Komms RPC**: paid access to Kaspa nodes run by Komms miners
+## Longer-term direction
 
-## The longer view
+The [roadmap paper](../../papers/komms-roadmap.pdf) presents four phases:
 
-The four phases from the [Komms Roadmap (PDF)](../../papers/komms-roadmap.pdf):
+1. **Communication:** the Komms app and a protocol other applications can use.
+2. **Kaspa RPC:** scored access to node capacity operated by miners.
+3. **Agent communication:** identity, private coordination, recorded outcomes and settlement.
+4. **Validation and proving:** objectively checked computation over ordered data.
 
-1. **Open communication protocol.** The flagship Komms app, and a shared backend other apps can build on.
-2. **Decentralised Kaspa RPC.** Every Komms miner already runs a Kaspa node; that capacity becomes a scored service for developers, wallets and AI agents.
-3. **AI-to-AI communication.** Agents that confirm each other's identity, talk privately, record the outcome on Kaspa and settle payments.
-4. **Validation and zero-knowledge proving.** Komms miners grow into an independent proving layer anchored to Kaspa.
-
-Later phases depend on the earlier ones working in public first. Dates are announced when each is ready, not before.
+Data availability supports the proposed later services. Each phase depends on demonstrated demand, viable costs and qualification of its own mechanism. The diagram is a direction of travel, not a claim of completed development or guaranteed token demand.

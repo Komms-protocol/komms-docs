@@ -2,7 +2,10 @@
 
 Create a Komms Business workspace, add channels, invite your team and choose a plan.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 A workspace is your company's home in Komms. Everything your team shares lives inside it.
 
@@ -12,7 +15,7 @@ A workspace is your company's home in Komms. Everything your team shares lives i
 2. Give it your company or team name and an icon.
 3. Every new workspace starts on **Starter**, the free plan.
 
-Creating a workspace is your first action, so this is when your identity is created and you're asked to save your [recovery kit](../security-and-privacy/recovery-kit.md).
+If you do not already have a Komms identity, creating a workspace creates one and asks you to save your [recovery kit](../security-and-privacy/recovery-kit.md).
 
 ## Add channels
 

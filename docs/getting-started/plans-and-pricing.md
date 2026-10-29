@@ -19,6 +19,8 @@ Komms is priced per workspace or per server, never per person. Every plan includ
 | Scale | $899 | $90.99 | Up to 75 | 1.5 TB | 500 GB a month (coming soon) |
 | Bespoke | Let's talk | Let's talk | 75 and over | Custom | Custom |
 
+Starter's 10 GB allowance follows an initial 30-day period with 1 GB for a new free workspace. See [Files and storage](../using-komms/files-and-storage.md).
+
 - **Team** adds roles, moderation and the admin console.
 - **Growth** adds client and supplier channels.
 - **Scale** adds priority support.

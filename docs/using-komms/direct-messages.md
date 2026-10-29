@@ -2,7 +2,10 @@
 
 Private one-to-one and group conversations, end-to-end encrypted, with the same tools as channels.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Direct messages and group chats are private conversations outside any channel. They're end-to-end encrypted, so only the people in them can read them.
 

@@ -1,10 +1,10 @@
 # Privacy notice
 
-How komms.app handles information when you visit the site and sign up for early access.
+How the Komms website handles early-access sign-ups and visits.
 
 *Updated 21 October 2026*
 
-The full privacy notice for komms.app is at **[komms.app/privacy](https://komms.app/privacy)**.
+The full notice is on the **[current Komms website](https://komms-landing-landing-page.up.railway.app/privacy.html)**.
 
 In short:
 

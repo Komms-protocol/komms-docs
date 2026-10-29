@@ -2,7 +2,10 @@
 
 Give people the right permissions, keep conversations on track, and understand how moderation decisions take effect.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Roles decide who can do what in a workspace or server. Moderation tools keep conversations healthy.
 
@@ -19,10 +22,10 @@ Roles, moderation and the admin console come with **Team, Growth and Scale** for
 
 ## Moderation actions
 
-- **Delete any message:** the message is hidden for everyone straight away.
+- **Delete any message:** clients apply the signed deletion to new views. A message already displayed can remain visible with a label; this does not recall saved copies.
 - **Pin and unpin:** keep important messages at the top of a channel.
-- **Remove or ban:** takes effect immediately for that person.
-- **Channel restrictions** (such as making a channel read-only) take effect after a short grace period, so everyone's apps agree on the change.
+- **Remove or ban:** clients enforce the signed authority change when received and validated. Offline devices cannot be updated immediately.
+- **Channel restrictions**, such as read-only mode, have a five-hour canonical grace period in the launch design. Their display can update earlier; history acceptance follows the protocol rule.
 
 ## How decisions are recorded
 
@@ -32,4 +35,4 @@ A message someone has already seen is never silently erased from their screen by
 
 ## Private channels and bans
 
-When someone is removed from a private channel or group, its encryption keys change. They keep anything they already received, but can't read new messages.
+When someone is removed from a private channel or group, its encryption keys change. They keep anything they already received. Subsequent keys exclude them, subject to the ended-epoch delivery window and propagation limits described in [How encryption works](../security-and-privacy/how-encryption-works.md).

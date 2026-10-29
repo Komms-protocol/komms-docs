@@ -2,7 +2,10 @@
 
 Short answers to the questions people ask most about Komms.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 ## Do my staff or members need crypto?
 
@@ -34,11 +37,11 @@ Voice and video calls, end-to-end encrypted, are **coming soon**.
 
 ## What does "anchored" mean on a message?
 
-Your messages arrive straight away. Every few hours, your app records a fingerprint of your recent messages on Kaspa. Once that's done, the message is **anchored**: anyone can check you sent it and where it sits in the conversation. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
+Delivery and anchoring are separate. An accepted anchor commits to message identifiers on Kaspa. Checking a message then requires the relevant identity records, template and node state; the author must remain open for a fresh live check. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
 
 ## What happens if I lose my phone?
 
-Sign in on another device with a synced passkey, or use your [recovery kit](../security-and-privacy/recovery-kit.md). Keep the kit safe, because it's full control of your account.
+A synced passkey may restore your seed vault, depending on your devices and provider. The [recovery kit](../security-and-privacy/recovery-kit.md) can restore identity control, but the kit alone cannot decrypt old history. That needs its old archive key and retained backup data.
 
 ## What happens if Komms shuts down?
 
@@ -50,7 +53,7 @@ There's no automatic import at launch. On the Large communities plan, we help yo
 
 ## Is Komms on mainnet?
 
-Not yet. See [Network status](../network/network-status.md) for where things stand.
+The recorded Komms deployment uses Kaspa Testnet 10 and Bittensor testnet subnet 503. Bittensor mainnet subnet 27 is the intended production slot; ownership does not establish that the Komms mechanism is qualified and operating there. See [Network status](../network/network-status.md) for where things stand.
 
 ## How do I contact you?
 

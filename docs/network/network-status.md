@@ -1,24 +1,62 @@
 # Network status
 
-Where Komms stands today, updated by hand. Last report 21 October 2026.
+The team's dated deployment account and the remaining public-beta gates.
 
-*Updated 21 October 2026*
+*Reviewed 22 October 2026; deployment evidence last reviewed 21 October 2026*
 
-> [!NOTE]
-> This page is written by hand, not a live monitor. It doesn't report uptime.
+This is a manually maintained report. It does not report live uptime, revenue
+or current chain metrics. [Evidence and claim boundaries](evidence.md) explains
+what each kind of evidence establishes.
 
-## Report: 21 October 2026
+## Network identifiers
 
-- **Komms runs on the Kaspa test network** (Testnet 10). There's no mainnet product yet.
-- **The launch version is being built.** It switches on with a planned reset of the test network, followed by the public beta.
-- **Plans are not on sale yet.** Web billing is being built. Prices are on [Plans and pricing](../getting-started/plans-and-pricing.md).
-- **The Komms subnet runs on the Bittensor test network** (netuid 503), with one team-run validator. Launch requires three independent miners and a second, independently run validator.
-- **Miner onboarding** is opening to a small first group, who will test the full set-up before the guide is published. See [Mining on Komms](../mining-and-validating/mining.md).
+| Network | Identifier | Recorded role |
+| --- | --- | --- |
+| Kaspa testnet | Testnet 10 | Current Komms test environment |
+| Bittensor testnet | Subnet 503 | Validator and miner qualification |
+| Bittensor mainnet | Subnet 27 | Intended production subnet; ownership is confirmed by the team |
 
-## Mainnet
+Mainnet subnet ownership is separate from activation of the Komms service.
+The recorded 18-19 October chain observations still carried the previous Orion
+identity. Check [Taostats](https://taostats.io/subnets/27/) for its current
+chain presentation; no live metrics are copied into this report.
 
-The public beta launches on Kaspa mainnet once the network features Komms relies on are active there. Until then, it runs as a public beta on the test network.
+## Current operating stage
 
-## Questions
+- The recorded Komms deployment runs on Kaspa TN10, with a team-run testnet
+  validator on Bittensor subnet 503.
+- The launch build is under integration. Merged code has not established a
+  deployed v4 service or a public-beta release.
+- Current incentive qualification is index-first. Required store, serve and
+  v4 relay probes need separate activation and acceptance evidence.
+- General miner and validator onboarding is not open. A first operator group
+  is helping qualify the installation and scored-state journeys.
+- Web billing and paid-plan activation remain launch work. This repository
+  does not report subscriptions sold, customer revenue or operator repayments.
 
-Email [info@komms.app](mailto:info@komms.app).
+## Public-beta acceptance
+
+Launch acceptance includes the integrated messaging journey, a verified
+release, three independently operated miners and a second independently run
+validator. It also includes cost and scoring evidence, host-loss and restore
+journeys, and working alerts. There is no fixed calendar soak.
+
+Miner installation alone does not establish admission or useful work. A
+returning or new operator must recover the required history and agree with the
+reference state; starting an empty DB at a pruned node is not proof of that.
+See [Mining](../mining-and-validating/mining.md).
+
+## Kaspa mainnet
+
+A mainnet public beta requires the necessary covenant functionality to be
+active on Kaspa mainnet and Komms' exact anchor-shaped transaction to be
+standard, accepted and mined. Production templates, custody and the
+mainnet user journey must also pass. A testnet public beta is the alternative
+if those gates are not met; this report does not claim that beta is live.
+
+## Updates
+
+Update this page when a deployment, independent qualification or public launch
+is evidenced. Product guides describe the planned public-beta experience;
+roadmaps describe later work. Send corrections or evidence requests to
+[info@komms.app](mailto:info@komms.app).

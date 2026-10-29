@@ -2,7 +2,10 @@
 
 How conversations work in Komms, from channels and threads of replies to edits, deletes, reactions and pins.
 
-*Updated 21 October 2026*
+*Updated 22 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Every conversation in Komms works the same way, whether it's a channel, a direct message or a group chat. The same tools are available everywhere.
 
@@ -36,8 +39,8 @@ Komms keeps one agreed order for every conversation, based on when each person's
 
 ## Deleting messages
 
-- In a **public channel**, deleting a message stops it being served straight away, and operators then erase it from storage.
-- In a **private conversation**, the delete is encrypted like everything else. Members' apps hide the message; operators can't read the delete, so they keep the encrypted copy for its normal retention period.
+- In a **public channel**, an accepted deletion stops new serving of the affected message. Eligible stored copies are removed asynchronously; another live storage claim can keep an object stored.
+- In a **private conversation**, the delete is encrypted like everything else. Members' apps apply the deletion; operators cannot read it, so ciphertext remains subject to normal retention. A previously displayed message can remain labelled in that view.
 
 Nobody can delete a copy that someone already saved or screenshotted.
 
