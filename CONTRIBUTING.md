@@ -1,24 +1,34 @@
 # Contributing
 
-Thanks for helping make the Komms docs better. Fixes for mistakes, unclear wording and broken links are all welcome.
+Corrections to facts, unclear wording, accessibility and broken links are welcome.
 
-## How to suggest a change
+## Suggest a change
 
-- **Small fix:** open a pull request that edits the page in `docs/`.
-- **Anything bigger, or a question:** open an issue first, so we can agree the change before you write it.
+For a small correction, open a pull request. For a change to scope, policy or architecture, open an issue first. Do not include private correspondence, credentials, customer data or internal operational records.
 
-Pages are plain Markdown, one file per guide, grouped by section. Link to another guide with a relative path, for example `[Plans and pricing](../getting-started/plans-and-pricing.md)`.
+Pages are plain Markdown, one guide per subject. From the repository root, a guide link looks like `[Plans and pricing](docs/getting-started/plans-and-pricing.md)`. Inside `docs/`, use a path relative to the page being edited.
 
 ## House style
 
-- **British English** spelling and punctuation.
-- **Plain, direct words.** Short sentences, and explain jargon the first time it appears.
-- **Be accurate about what exists.** Komms is preparing for its public beta, so mark anything not available at launch as "coming soon". Don't describe planned features as live.
-- **Avoid em dashes used for emphasis or contrast.** Restructure the sentence, or use a comma, colon or full stop.
-- **No marketing claims, prices or numbers** that aren't already on komms.app or in the papers.
+- Use British English and plain, direct language.
+- Never use an em dash. Rewrite with a comma, colon or full stop.
+- Keep one canonical location for each policy or status fact; link to it elsewhere.
+- Distinguish specified, implemented, tested, deployed and independently qualified. See [Evidence and claim boundaries](docs/network/evidence.md).
+- Label planned features and prices. A design, merged change or test count does not establish operating readiness.
+- Preserve the scope of security claims. State relevant metadata, availability and recovery limits.
+- Source commercial claims from the owner-approved [website](https://komms-landing-landing-page.up.railway.app/) and technical claims from verified specifications and evidence. Resolve contradictions before publication.
+- Do not add authorship credits or tool attribution to repository text, commits or pull requests.
 
-## Review
+## Run the checks
 
-Every change is reviewed by the Komms team before it's merged, and the published docs at [komms.app/docs](https://komms.app/docs) are updated from this repository.
+Use the Node version in `.node-version` and the dependency versions in `package-lock.json`. When Markdownlint is already installed under `node_modules`, run it through its Node API with `.markdownlint.json`.
 
-By contributing, you agree that your contribution is licensed under CC-BY-SA 4.0, like the rest of this repository.
+This snapshot does not contain a publication checker or tool test suite. Review local paths and anchors, navigation, publication text and paper checksums separately. Markdown lint does not prove a technical claim or confirm an external website's contents.
+
+For a paper change, include a `papers/SHA256SUMS` manifest, render and inspect the changed pages, and explain the publication revision in [Papers](docs/network/papers.md). A checksum identifies bytes; it does not validate the paper's claims.
+
+## Review and publication
+
+The team reviews changes before merging. This repository is the documentation source; it does not assert that a separate docs website is already deployed or automatically updated.
+
+By contributing, you agree that your contribution is licensed under CC-BY-SA 4.0. The Komms name and logo remain excluded as set out in [NOTICE](NOTICE).

@@ -2,7 +2,10 @@
 
 Create a Komms Community server, open public and invite-only channels, and grow without per-member fees.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 A server is your community's home in Komms. It can be open to anyone or kept to the people you invite.
 
@@ -34,4 +37,4 @@ Give trusted members the moderator role. Moderators can remove messages, pin pos
 
 ## Grow
 
-When your community needs more room for photos and files, upgrade to **Community Plus**. For very large communities, or help moving from another platform, talk to us about **Large communities**. See [Plans and pricing](plans-and-pricing.md).
+**Community Plus** is planned for communities needing more room for photos and files. Team and Community plans payable by card or KAS are **available soon**; nothing is purchasable yet. For very large communities, or help moving from another platform, talk to us about **Large communities**. See [Plans and pricing](plans-and-pricing.md).

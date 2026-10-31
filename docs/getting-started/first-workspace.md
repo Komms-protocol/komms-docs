@@ -2,7 +2,10 @@
 
 Create a Komms Business workspace, add channels, invite your team and choose a plan.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 A workspace is your company's home in Komms. Everything your team shares lives inside it.
 
@@ -12,7 +15,7 @@ A workspace is your company's home in Komms. Everything your team shares lives i
 2. Give it your company or team name and an icon.
 3. Every new workspace starts on **Starter**, the free plan.
 
-Creating a workspace is your first action, so this is when your identity is created and you're asked to save your [recovery kit](../security-and-privacy/recovery-kit.md).
+If you do not already have a Komms identity, creating a workspace creates one and asks you to save your [recovery kit](../security-and-privacy/recovery-kit.md).
 
 ## Add channels
 
@@ -41,4 +44,4 @@ On Team, Growth and Scale you can give people roles, such as admin and moderator
 Starter is free for small teams. When you need more storage or roles, upgrade to Team, Growth or Scale, paid yearly or monthly. See [Plans and pricing](plans-and-pricing.md).
 
 > [!NOTE]
-> Paid plans are bought on the web, from your account, by card. Invoices are available on Growth, Scale and Bespoke.
+> Team and Community plans payable on the web by card or KAS are **available soon**; nothing is purchasable yet. Invoices are planned for Growth, Scale and Bespoke.

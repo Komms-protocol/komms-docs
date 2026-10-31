@@ -2,19 +2,22 @@
 
 Short answers to the questions people ask most about Komms.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 ## Do my staff or members need crypto?
 
-No. People sign in with a passkey and use Komms like any chat app. Komms covers the network costs of everyday use, so nobody needs to buy or hold KAS. A [wallet](../using-komms/wallet.md) is built in for those who want one.
+No. People sign in with a passkey and use Komms like any chat app. Komms covers the network costs of everyday use, so nobody needs to buy or hold KAS. An optional built-in [wallet](../using-komms/wallet.md) is part of the public-beta design.
 
 ## Is it really end-to-end encrypted?
 
-Private channels, direct messages and group chats are end-to-end encrypted: only their members can read them. Public channels in community servers are readable by anyone, by design. See [How encryption works](../security-and-privacy/how-encryption-works.md).
+Private channels, direct messages and group chats have testnet end-to-end encryption evidence: only their members hold the content keys. Public channels in community servers are readable by anyone, by design. See [How encryption works](../security-and-privacy/how-encryption-works.md).
 
 ## Where is my data stored?
 
-Files are encrypted and stored with independent storage providers, starting with Hippius. Messages are relayed by independent operators. Kaspa holds proof of the order of events, not the messages themselves. See [How Komms works](../network/how-komms-works.md).
+Private-conversation files are encrypted before storage. Current storage evidence is a Komms-managed Hippius account with a same-host mirror, and relay operation is team-run testnet work. Independent storage and relay operation are not qualified. Kaspa holds proof of the order of events, not the messages themselves. See [How Komms works](../network/how-komms-works.md).
 
 ## Is there a per-seat fee or a member limit?
 
@@ -22,11 +25,11 @@ Neither. You pay one price per workspace or server. Plans recommend a team size 
 
 ## Can I pay monthly?
 
-Yes. Every paid plan can be paid yearly or monthly. Yearly saves about 17%.
+Yearly and monthly billing are planned, with yearly saving about 17%. Team and Community plans payable by card or KAS are **available soon**; nothing is purchasable yet.
 
 ## Is there a mobile app?
 
-Komms launches on the web and as desktop apps for macOS and Windows. iOS and Android apps with push notifications are **coming soon**. See [Apps](../using-komms/apps.md).
+Web is the public-beta target. macOS and Windows desktop shells remain in flight, subject to signing and release qualification. iOS and Android apps with push notifications are **coming soon**. See [Apps](../using-komms/apps.md).
 
 ## Are there voice and video calls?
 
@@ -34,15 +37,15 @@ Voice and video calls, end-to-end encrypted, are **coming soon**.
 
 ## What does "anchored" mean on a message?
 
-Your messages arrive straight away. Every few hours, your app records a fingerprint of your recent messages on Kaspa. Once that's done, the message is **anchored**: anyone can check you sent it and where it sits in the conversation. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
+Delivery and anchoring are separate. An accepted anchor commits to message identifiers on Kaspa. Checking a message then requires the relevant identity records, template and node state; the author must remain open for a fresh live check. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
 
 ## What happens if I lose my phone?
 
-Sign in on another device with a synced passkey, or use your [recovery kit](../security-and-privacy/recovery-kit.md). Keep the kit safe, because it's full control of your account.
+A synced passkey may restore your seed vault, depending on your devices and provider. Recovery onto a new master seed using the [recovery kit](../security-and-privacy/recovery-kit.md) is planned, not shipped. The kit alone cannot decrypt old history. That needs its old archive key and retained backup data.
 
 ## What happens if Komms shuts down?
 
-Your identity lives on Kaspa, not in a Komms database, and you can keep a verifiable [export of your history](../using-komms/export-your-history.md). Some services are still run by the Komms team at launch, and those would be affected. See [What the team still runs](../network/what-we-run.md).
+Your identity lives on Kaspa, not in a Komms database. Full private-history [export](../using-komms/export-your-history.md) is planned, not available. Current testnet services depend on the Komms team and its storage provider, so a shutdown could affect access. See [What Komms runs today](../network/what-we-run.md).
 
 ## Can I move my community from Discord or Telegram?
 
@@ -50,7 +53,7 @@ There's no automatic import at launch. On the Large communities plan, we help yo
 
 ## Is Komms on mainnet?
 
-The operator network is. Komms is [Bittensor mainnet subnet 27](https://taostats.io/subnets/27). The app is still preparing for its public beta, on Kaspa testnet-10, and moves to Kaspa mainnet with that beta. See [Network status](../network/network-status.md).
+The recorded Komms deployment uses Kaspa Testnet 10 and Bittensor testnet subnet 503. Investors hold the Bittensor mainnet netuid 27 owner key, and a control proof was accepted on 25 October 2026. The Komms mechanism is not claimed to be operating there, publishing weights or paying operators. See [Network status](../network/network-status.md) for where things stand.
 
 ## How do I contact you?
 

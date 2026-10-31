@@ -2,13 +2,16 @@
 
 How files are encrypted and stored, how storage is counted, how long files are kept and what happens when a plan ends.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 You can share documents, images and video in any conversation. Files in private conversations are encrypted on your device before they're uploaded.
 
 ## Where files are stored
 
-Files are encrypted and stored with independent storage providers, starting with Hippius, a decentralised storage network. Komms keeps a record of which workspace or person each file is charged to, so storage allowances can be enforced.
+Private-conversation files are encrypted before storage. The launch design uses a Komms-managed Hippius provider account with a same-host mirror; independent operator storage is a separate qualification step. Komms keeps a record of which workspace or person each file is charged to, so storage allowances can be enforced.
 
 ## File size
 
@@ -44,15 +47,15 @@ Members see the workspace's storage use, rounded, and their own contribution exa
 
 ## If a paid plan ends
 
-1. If a yearly plan isn't renewed, storage becomes **read-only for 90 days** (14 days after a card payment is disputed). You can still read and export everything.
+1. If a yearly plan isn't renewed, storage becomes **read-only for 90 days** (14 days after a card payment is disputed). The design preserves read access to retained data during that period. Full private-history export is planned, not available.
 2. Renewing during that window restores everything as it was.
 3. After the window, the **oldest files are removed first** until the workspace fits the free allowance. The workspace then carries on as a free one.
 
-You can [export your history](export-your-history.md) at any time, including during the read-only window. An export can't bring back files that were already removed.
+Full private-history [export](export-your-history.md) is planned, not available. Once released, it is intended to work during the read-only window. An export cannot bring back files that were already removed.
 
 ## Deleting files
 
-Deleting a file releases its storage. Copies are removed from Komms and the provider is asked to delete them after a 48-hour hold. Komms can't promise a provider has physically erased every copy, and nobody can remove copies other people already downloaded.
+Deleting a file releases its storage claim. Serving stops according to the applicable deletion rule, and the provider is asked to delete eligible copies after a 48-hour hold. Another live claim can keep the same object stored. Komms can't promise a provider has physically erased every copy, and nobody can remove copies other people already downloaded.
 
 ## File transfers
 

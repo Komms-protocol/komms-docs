@@ -1,13 +1,16 @@
 # What is Komms
 
-One secure app for teams and communities. Chat, share files and make decisions, end-to-end encrypted, on a network no single company controls.
+Messaging for teams and communities, with encrypted private content and identities held on Kaspa.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Komms is a messaging app for teams and communities. It does the everyday jobs of a chat tool (channels, direct messages, replies, reactions and file sharing) with two big differences:
 
-- **Private conversations are end-to-end encrypted.** Only the people in a conversation can read it. Komms and the operators who run the network can't.
-- **Your account and your history belong to you.** Your identity lives on the Kaspa network, not in a Komms database, and you can export a copy of your history that anyone can check.
+- **Private conversations have testnet end-to-end encryption evidence.** Members hold the content keys for direct messages, groups and private channels. Public channels are readable by design.
+- **User-held identity and planned history export.** Your identity lives on the Kaspa network, not in a Komms database. Full private-history export is planned, not available. Its verification would require retained data and an open author identity for a fresh live check.
 
 ## Two products, one app
 
@@ -24,11 +27,11 @@ Both use the same app and the same account. Read [Komms Business or Komms Commun
 
 - **Sign in with a passkey.** No password to leak or phish. See [Create your account](create-your-account.md).
 - **Flat pricing.** One price per workspace or server, with no per-seat fees and no member limits. See [Plans and pricing](plans-and-pricing.md).
-- **A network, not a data centre.** Messages are relayed and files stored by independent operators, who are paid through Bittensor subnet 27. Kaspa keeps the order of events. See [How Komms works](../network/how-komms-works.md).
-- **Proof you can keep.** Every person's messages are anchored on Kaspa, so a conversation's history can be checked without trusting Komms. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
+- **An operator network.** The design separates delivery, indexing and storage into measurable services. Kaspa orders commitments and Bittensor allocates rewards. Some launch services remain team-operated. See [How Komms works](../network/how-komms-works.md).
+- **Records you can keep.** Accepted anchors let a verifier check message commitments against Kaspa, when the required records and live state are available. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
 
 > [!NOTE]
-> Komms is preparing for its public beta. These docs describe how Komms works at launch. Anything still on the way is marked **Coming soon**. For where things stand today, see [Network status](../network/network-status.md).
+> Komms is preparing for its public beta. These guides describe the intended beta product, rather than a list of live capabilities. For where things stand today, see [Network status](../network/network-status.md).
 
 ## Where to go next
 

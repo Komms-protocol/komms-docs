@@ -1,31 +1,25 @@
 # Web, desktop and mobile apps
 
-Use Komms in your browser or as a desktop app at launch. Mobile apps, push notifications and calls follow soon after.
+The planned client platforms and the checks needed before distribution.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
 
-## At launch
+> [!NOTE]
+> This is the public-beta distribution plan. [Network status](../network/network-status.md) records availability; it is not a download page.
 
-| App | Status |
+| Client | Target |
 | --- | --- |
-| Web app, in any modern browser | At launch |
-| Desktop app for macOS (signed and notarised) | At launch |
-| Desktop app for Windows (signed) | At launch |
-| iOS app with push notifications | (coming soon) |
-| Android app with push notifications | (coming soon) |
+| Web | Public beta, with browser compatibility qualified before release |
+| macOS desktop | In flight; public-beta target subject to signing, notarisation and release checks |
+| Windows desktop | In flight; public-beta target subject to signing and platform qualification |
+| iOS and Android | Later planned work, including push notifications |
 
-The apps are free. You pay for plans on the web, from your account.
+The apps are intended to be free. Team and Community plans payable through the web account by card or KAS are available soon; nothing is purchasable yet. Mobile calls, voice/video and full local-history search are separate roadmap items, not current distribution claims.
 
-## Coming soon
+## More than one device
 
-- **Mobile apps** for iOS and Android, with push notifications.
-- **Voice and video calls**, end-to-end encrypted with keys from the conversation itself.
-- **Search across your full local history**, not just the messages loaded on screen.
+Each device needs access to the appropriate seed and conversation state. Passkey synchronisation alone does not prove that all history or keys have been restored. Do not discard a working device before checking the replacement. See [Your recovery kit](../security-and-privacy/recovery-kit.md).
 
-## Using more than one device
+## Authentic downloads
 
-Sign in on each device with your passkey. Each device keeps its own encrypted copy of your conversations. Any of your devices can finish anchoring messages that another device sent before it went offline.
-
-## Keeping your app up to date
-
-Desktop apps are signed, so your computer can check they really come from Komms. Only download Komms from komms.app.
+When releases are available, use only the official links and verify the publisher and platform trust checks. A website mock-up or roadmap entry is not a signed release. Do not install binaries supplied in an unsolicited message.
