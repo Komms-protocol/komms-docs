@@ -2,7 +2,7 @@
 
 The information visible on testnet today and the planned public-beta privacy boundary.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
 > [!NOTE]
 > The table below describes the planned privacy boundary. On testnet today, stored objects can be retrieved anonymously by content ID; the planned signed-request policy is not the current access boundary. See [Network status](../network/network-status.md) for deployment status. Encryption protects private content; it does not hide all membership or activity information.
@@ -32,16 +32,16 @@ A random conversation identifier does not encode its members. It also does not m
 
 ## Public content and deletion
 
-Anyone can read and copy a public channel. A valid deletion stops serving the affected content, followed by asynchronous deletion of eligible stored copies. An object with another live storage claim can remain stored. Komms cannot establish that every provider or recipient has physically erased every copy.
+Anyone can read and copy a public channel. Under the planned deletion policy, a valid deletion would stop new serving of the affected content and schedule eligible stored copies for provider deletion. Another live storage claim could keep an object stored. Live deletion and sweeps lack operational evidence: a testnet deletion does not establish storage removal or cessation of anonymous content-ID retrieval. Komms cannot establish that every provider or recipient has physically erased every copy.
 
-Private-message deletion is encrypted. Members' clients can hide the message, while operators retain ciphertext according to retention policy. Public anchor identifiers remain. See [Files and storage](../using-komms/files-and-storage.md).
+In the planned private-message deletion flow, the deletion would be encrypted and members' clients would hide the message; ciphertext would remain subject to the planned retention policy. This would not remove public anchor identifiers. See [Files and storage](../using-komms/files-and-storage.md).
 
 ## Public records and availability
 
-The launch design has one Komms-run publisher and a public-read storage bucket, with a same-host mirror. That mirror is not an independent availability guarantee. Records remain available while the provider is paid; they contain no private-message plaintext but can expose the metadata listed above.
+The proposed public records store would use one Komms-run publisher, a public-read storage bucket and a same-host mirror. Retrieval still awaits qualification, including a credential-free read probe. Planned availability would depend on Komms continuing to pay the provider; the mirror would not establish independent availability. The proposed records would exclude private-message plaintext but expose the metadata listed above.
 
 ## Retention and website data
 
-The storage-ledger policy removes identity fields 30 days after object deletion. This is a retention policy, not proof that every underlying copy has been erased.
+The planned storage-ledger policy calls for removing identity fields 30 days after object deletion. Live enforcement is unverified, and the policy would not prove that every underlying copy had been erased.
 
 The [Privacy notice](privacy-notice.md) separately covers the website's sign-up form, provider logs and other website data handling.

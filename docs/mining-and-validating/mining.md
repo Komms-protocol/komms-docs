@@ -2,7 +2,7 @@
 
 What a Komms miner provides, how work is measured and what an operator must qualify before serving users.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
 > [!NOTE]
 > General onboarding is not open yet. The turnkey package is still being qualified with initial operators. Do not send funds or register a hotkey based on this guide. [Network status](../network/network-status.md) records readiness.
@@ -17,7 +17,7 @@ Validators compare answers with their own Kaspa nodes and use bounded probes. A 
 
 ## Rewards and costs
 
-Bittensor emissions reward measured work according to validator weights and chain rules. The launch programme separately audits sponsored Kaspa costs and repays accepted claims in alpha from an operator-program pot. A probe stipend is also separate from customer demand. See [Incentives and funding](../network/incentives.md).
+Bittensor emissions reward measured work according to validator weights and chain rules. The planned launch programme would separately audit sponsored Kaspa costs and repay accepted claims in alpha from an operator-program pot. Operating repayments have not been established. A probe stipend is also separate from customer demand. See [Incentives and funding](../network/incentives.md).
 
 Emissions, alpha price, claim acceptance and liquidity are variable. Komms does not promise a fixed return, cost coverage or repayment from emissions. Operators need a spending limit, a funded Kaspa wallet and enough resources to remain online while claims are reviewed.
 

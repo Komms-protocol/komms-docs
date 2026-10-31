@@ -2,7 +2,7 @@
 
 Devices encrypt and sign, operators deliver and store, Kaspa orders commitments, and Bittensor allocates rewards for measured service.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
 > [!NOTE]
 > This page describes the target architecture. [Network status](network-status.md) records what is operating; [What Komms runs](what-we-run.md) identifies team-controlled dependencies.
@@ -29,7 +29,7 @@ Identity changes and private-conversation control events use the ordered control
 
 An identity is held in a Kaspa covenant. Its owner and recovery keys authorise the relevant state transitions. Komms does not hold a key that grants control over a user's identity.
 
-Verifiers reconstruct the history against the pinned template and node state. A successful live check requires an open author identity and the necessary records. Public-record availability still depends on the launch publisher and storage provider.
+Verifiers reconstruct the history against the pinned template and node state. A successful live check requires an open author identity and the necessary records. This independent verification flow is planned. Its proposed public records store would depend on the launch publisher and paid storage provider; credential-free retrieval has not yet been qualified.
 
 ## Operators and incentives
 

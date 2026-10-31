@@ -11,7 +11,7 @@ You can share documents, images and video in any conversation. Files in private 
 
 ## Where files are stored
 
-Private-conversation files are encrypted before storage. The launch design uses a Komms-managed Hippius provider account with a same-host mirror; independent operator storage is a separate qualification step. Komms keeps a record of which workspace or person each file is charged to, so storage allowances can be enforced.
+Private-conversation files are encrypted before storage. The launch design uses a Komms-managed Hippius provider account with a same-host mirror; independent operator storage is a separate qualification step. The planned storage ledger would record which workspace or person each file is charged to. Live allowance enforcement remains unverified.
 
 ## File size
 
@@ -39,6 +39,8 @@ Members see the workspace's storage use, rounded, and their own contribution exa
 
 ## How long files are kept
 
+These are planned retention rules. Live retention enforcement and sweeps remain unverified.
+
 - **Free plans:** each file is kept for 12 months, on a rolling basis.
 - **Paid plans:** files are kept for as long as the plan is active.
 
@@ -48,14 +50,14 @@ Members see the workspace's storage use, rounded, and their own contribution exa
 ## If a paid plan ends
 
 1. Under the planned lapse policy, if any paid plan lapses, whether billed yearly or monthly, storage becomes **read-only for 90 days**. A card payment dispute has a separate **14-day read-only period**. The design preserves read access to retained data during that period. Full private-history export is planned, not available.
-2. Renewing during that window restores everything as it was.
-3. After the window, the **oldest files are removed first** until the workspace fits the free allowance. The workspace then carries on as a free one.
+2. Under that policy, renewal during the window would restore active access to retained files.
+3. The planned sweep would then remove the **oldest files first** until the workspace fits the free allowance and continues as a free one. Live lapse handling and sweeps remain unverified.
 
 Full private-history [export](export-your-history.md) is planned, not available. Once released, it is intended to work during the read-only window. An export cannot bring back files that were already removed.
 
 ## Deleting files
 
-Deleting a file releases its storage claim. Serving stops according to the applicable deletion rule, and the provider is asked to delete eligible copies after a 48-hour hold. Another live claim can keep the same object stored. Komms can't promise a provider has physically erased every copy, and nobody can remove copies other people already downloaded.
+Under the planned deletion policy, deleting a file would release its storage claim. Serving would stop according to the applicable deletion rule, and the provider would be asked to delete eligible copies after a 48-hour hold. Another live claim could keep the same object stored. Live deletion and sweeps remain unverified; a testnet deletion does not establish storage removal or cessation of anonymous content-ID retrieval. Komms can't promise a provider has physically erased every copy, and nobody can remove copies other people already downloaded.
 
 ## File transfers
 

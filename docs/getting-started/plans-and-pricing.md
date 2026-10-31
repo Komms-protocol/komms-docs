@@ -65,6 +65,6 @@ Messaging is unlimited under fair use, to keep workspaces and servers free of sp
 ## Files on every plan
 
 - Each file can be up to **64 MiB** at launch.
-- Files on free plans are kept for 12 months, on a rolling basis. Files on paid plans are kept for as long as the plan is active.
+- Planned retention is 12 months rolling for free-plan files and the life of the plan for paid-plan files. Live enforcement and sweeps remain unverified.
 
 See [Files and storage](../using-komms/files-and-storage.md) for how storage is counted and what happens if a plan ends.

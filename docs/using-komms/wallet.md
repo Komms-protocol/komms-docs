@@ -26,4 +26,4 @@ Team and Community plans payable by card or KAS on the web are **available soon*
 
 ## Keep it safe
 
-Your wallet is controlled by the same keys as your account. Anyone with your [recovery kit](../security-and-privacy/recovery-kit.md) controls your wallet too.
+Your wallet balance requires its wallet keys. The [recovery kit](../security-and-privacy/recovery-kit.md) contains a recovery secret independent of the master seed. In the recovery design, it authorises taking over the identity and directing its covenant value on close. The kit alone does not restore or control separate wallet funds. Keep the wallet keys or their seed backup safe as well; planned fresh-seed identity recovery does not recover that balance.

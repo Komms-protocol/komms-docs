@@ -2,7 +2,7 @@
 
 How fast delivery differs from a later, verifiable commitment on Kaspa.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
 > [!NOTE]
 > This guide describes the public-beta design, not a measured production latency or availability promise. See [Network status](../network/network-status.md).
@@ -20,7 +20,7 @@ Delivery can happen before anchoring. A relay's acknowledgement does not establi
 | Anchor pending | The identifier is awaiting an accepted anchor |
 | Anchored | The identifier is included in an accepted Kaspa anchor |
 
-Verification is a separate result. **Verified** requires checking with your own node, or nodes run by two independent operators. **Single node** records a weaker observation. Neither label proves who physically held the signing key.
+Independent verification is a planned capability, not an available client result. The following labels describe its intended outcomes. **Verified** requires checking with your own node, or nodes run by two independent operators. **Single node** records a weaker observation. Neither label proves who physically held the signing key.
 
 ## Sponsorship and waiting
 

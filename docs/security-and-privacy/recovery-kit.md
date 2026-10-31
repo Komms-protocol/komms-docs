@@ -10,7 +10,7 @@ What the kit controls, how it differs from a history backup, and what to do if i
 The recovery kit contains your identity's recovery secret, covenant identifier and template version. The secret is generated independently of the device's master seed. Komms does not hold a copy.
 
 > [!WARNING]
-> Anyone holding the kit can immediately replace the identity's owner key or close the identity. This can put the account and its value under their control. There is no protective waiting period for use of the kit.
+> Anyone holding the kit can immediately replace the identity's owner key or close the identity. This grants authority over the identity and its covenant value, not the separate wallet balance. The kit alone does not restore or control wallet funds. There is no protective waiting period for use of the kit.
 
 ## Keep it safe
 

@@ -1,12 +1,12 @@
 # Privacy notice
 
-How the Komms website handles early-access sign-ups and visits.
+The draft description of website data handling and where to find the current notice.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
 
 The full notice is on the **[current Komms website](https://komms-landing-landing-page.up.railway.app/privacy.html)**.
 
-In short:
+The draft below describes intended processing; it is not verification of the live site or a final approved notice:
 
 - When you sign up for early access, we keep your email address and, if you give them, your role and the page or button you signed up from. We use them only to contact you about Komms.
 - The sign-up form uses Cloudflare Turnstile to keep out spam.

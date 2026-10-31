@@ -54,13 +54,15 @@ claim.
 
 ## Availability and verification
 
-Independent history verification needs the message, supporting records, the
+Independent history verification is planned, not available. It would need the message, supporting records, the
 accepted template and node access while the author's identity remains open.
 A fresh check after closure cannot establish the old history; an earlier
 recorded result remains a local observation.
 
-Public records remain available while Komms pays their storage provider.
-A same-host mirror is not independent availability. Storage retention, provider
+The public records store is proposed, not operating. Its planned availability
+would depend on Komms continuing to pay the storage provider. Public-record
+retrieval awaits qualification, including a credential-free read probe.
+A same-host mirror would not establish independent availability. Storage retention, provider
 deletion and restoration after operator loss need operational evidence, even
 when the corresponding code has passed tests.
 
