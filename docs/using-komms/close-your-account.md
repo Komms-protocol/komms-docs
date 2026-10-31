@@ -2,13 +2,16 @@
 
 What closing your Komms account does, what it can't undo, and what to do first.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Closing your account is permanent. Read this page before you do it.
 
 ## Before you close
 
-1. [Export your history](export-your-history.md). After closing, your history can no longer be freshly verified.
+1. Preserve the records and keys you already hold. Full private-history [export](export-your-history.md) is planned, not available; do not close an identity in reliance on that feature. After closing, your history can no longer be freshly verified.
 2. Move or hand over any workspace or server you're the only admin of.
 3. Make sure you no longer need anything in your [wallet](wallet.md).
 
@@ -16,7 +19,7 @@ Closing your account is permanent. Read this page before you do it.
 
 - Your identity on Kaspa is closed for good. Signing up again starts a new identity; it doesn't continue the old one.
 - Your **username is retired** and can't be used again by anyone.
-- Your personal storage is released after you've had the chance to export.
+- The closure design releases personal storage; it does not make the planned full private-history export available.
 - A small deposit that Komms paid to create your identity returns to Komms. Anything you added yourself goes where you choose.
 
 ## What closing can't do

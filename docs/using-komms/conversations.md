@@ -2,7 +2,10 @@
 
 How conversations work in Komms, from channels and replies to edits, deletes, reactions and pins.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
+
+> [!NOTE]
+> This guide describes the planned public beta. See [Network status](../network/network-status.md) for availability and qualification.
 
 Every conversation in Komms works the same way, whether it's a channel, a direct message or a group chat. The same tools are available everywhere.
 
@@ -28,7 +31,7 @@ Public channels exist in community servers. Workspace channels are private.
 
 ## Sending without waiting
 
-Messages are delivered straight away, so you can send several in a row without waiting. Each message shows its delivery state, from **sent** to **delivered** and then **anchored**. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md) for what each state means.
+The planned relay flow would let you send several messages before anchoring. It does not guarantee immediate delivery or a universal recipient-delivery receipt. The design distinguishes **sent**, **received on this device**, **anchor pending** and **anchored**. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md) for what each state means.
 
 ## Message order
 
@@ -36,8 +39,10 @@ Komms keeps one agreed order for every conversation, based on when each person's
 
 ## Deleting messages
 
-- In a **public channel**, deleting a message stops it being served straight away, and operators then erase it from storage.
-- In a **private conversation**, the delete is encrypted like everything else. Members' apps hide the message; operators can't read the delete, so they keep the encrypted copy for its normal retention period.
+The following is the planned deletion policy. Live deletion and sweeps are not operationally evidenced; deleting on testnet does not establish storage removal or stop anonymous content-ID retrieval.
+
+- In a **public channel**, an accepted deletion would stop new serving of the affected message and schedule eligible stored copies for asynchronous removal; another live storage claim could keep an object stored.
+- In a **private conversation**, the delete is encrypted like everything else. Members' apps apply the deletion; operators cannot read it, so ciphertext remains subject to normal retention. A previously displayed message can remain labelled in that view.
 
 Nobody can delete a copy that someone already saved or screenshotted.
 

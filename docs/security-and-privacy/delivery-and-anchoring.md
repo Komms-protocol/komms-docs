@@ -1,50 +1,45 @@
 # Message delivery and anchoring
 
-Messages arrive instantly. A few hours later they're anchored on Kaspa, so anyone can check who sent what, and in what order.
+How fast delivery differs from a later, verifiable commitment on Kaspa.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
 
-Komms separates **delivering** a message from **proving** it.
+> [!NOTE]
+> This guide describes the public-beta design, not a measured production latency or availability promise. See [Network status](../network/network-status.md).
 
-- **Delivery** is instant. Operators called relays pass your message to the other people in the conversation, usually in under a second.
-- **Anchoring** comes later. Your app records a fingerprint of your recent messages in one transaction on the Kaspa network. After that, anyone can check that you sent them and where they sit in the conversation.
+**Delivery** passes a signed message through relays to recipients. **Anchoring** records a commitment to a batch of message identifiers in a Kaspa transaction. Private message bodies stay off chain.
 
-Message content never goes on the blockchain, only fingerprints.
+Delivery can happen before anchoring. A relay's acknowledgement does not establish that a recipient read the message, or that its identifier has been accepted on Kaspa. The launch mechanism has no universal recipient-delivery receipt.
 
-## Delivery states
+## Reading the states
 
 | State | Meaning |
 | --- | --- |
-| Sent | Your app has sent the message to the conversation's relays |
-| Delivered | It reached the other people's apps |
-| Anchor pending | It's waiting for your next anchor |
-| Anchored | Its fingerprint is recorded on Kaspa and confirmed |
+| Sent | The app submitted the message to its relays |
+| Received on this device | This device received the envelope; it does not establish delivery to every recipient |
+| Anchor pending | The identifier is awaiting an accepted anchor |
+| Anchored | The identifier is included in an accepted Kaspa anchor |
 
-Messages also show whether they could be checked: **Verified** when confirmed by your own node or by two independent operators, or **Single node** when only one node confirmed it, which is a weaker result.
+Independent verification is a planned capability, not an available client result. The following labels describe its intended outcomes. **Verified** requires checking with your own node, or nodes run by two independent operators. **Single node** records a weaker observation. Neither label proves who physically held the signing key.
 
-## How often messages are anchored
+## Sponsorship and waiting
 
-At launch, each account anchors about **every 4 hours** while the app is open. Komms covers the network fee, through the operator who sponsors the anchor.
+The base launch policy allows a sponsored anchor on a four-hour gap, with a bounded allowance for additional sponsored spends inside that gap. Membership, key or moderation changes can consume that allowance. They do not all receive an unlimited fee exemption.
 
-Some things are anchored straight away, without waiting:
+If the allowance is exhausted, the app must wait or offer a user-paid transaction through the [wallet](../using-komms/wallet.md). Actual acceptance also depends on node policy, block capacity, fees and connectivity. The four-hour gap is a policy, not a deadline guarantee.
 
-- joining a private conversation
-- leaving one, changing role or changing keys
-- moderation actions
-- reaching the limit of messages waiting to be anchored
+A sponsored batch holds at most 100 identifiers, including any history-segment identifier. Relays also bound unanchored traffic. Reaching a bound can delay further delivery or require an anchor; it does not establish that all pending messages are durable.
 
-If you hold KAS in your [wallet](../using-komms/wallet.md), you can pay for an anchor yourself at any time.
+A lost device, abandoned pending batch or key superseded before anchoring can leave a delivered message outside canonical history. Keep recovery and [backup](recovery-kit.md) limits in mind.
 
-## The waiting limit
+## Agreed order
 
-Up to **100 messages** per person can wait for an anchor. If you reach the limit, your app anchors early and tells you. No message is lost.
+The canonical history uses Kaspa's accepted anchor order and the message relationships defined by the protocol. It does not trust device clocks. The app can preserve the order already displayed to a reader; that display order is separate from a later canonical check.
 
-To stop spam, the people you write to see at most 100 of your unanchored messages in any 48 hours. Anything beyond that is held until it's anchored.
+## What verification requires
 
-## The agreed order
+A fresh check needs the message, the required identity and anchor records, the pinned covenant template and access to the appropriate node state. The author's identity must remain open for the live-identity check. A closed lineage cannot receive a fresh successful live check under this model.
 
-Messages from different people are put in order by when their anchors were accepted on Kaspa, not by the clocks on their devices. Messages you've already seen stay where they are on your screen; the agreed order never re-sorts them.
+A saved earlier verification result remains a record of what that verifier observed then. It is not a new network observation. See [Export your history](../using-komms/export-your-history.md).
 
-## What anchoring proves, and what it doesn't
-
-Anchoring proves that your identity's key approved a batch of messages, and their order in your history. It doesn't prove exactly when a message was sent, that it was delivered, which of your devices sent it, or that the person holding the key was its rightful owner.
+Anchoring establishes the signed commitment and its place in an identity's history. It does not establish the exact send time, delivery, which device signed, or that its key holder was the rightful owner.

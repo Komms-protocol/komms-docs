@@ -1,46 +1,45 @@
 # How Komms works
 
-Your device encrypts, independent operators deliver and store, Kaspa keeps the order, and Bittensor subnet 27 pays the operators.
+Devices encrypt and sign, operators deliver and store, Kaspa orders commitments, and Bittensor allocates rewards for measured service.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
-Komms is built on open networks rather than one company's data centre. Each part has one job.
+> [!NOTE]
+> This page describes the target architecture. [Network status](network-status.md) records what is operating; [What Komms runs](what-we-run.md) identifies team-controlled dependencies.
 
-| Part | Its job |
+## The parts
+
+| Part | Responsibility |
 | --- | --- |
-| **Your device** | Encrypts and signs everything you send. Keeps your keys. |
-| **Relays** | Deliver messages to everyone in a conversation, straight away. |
-| **Storage** | Holds encrypted files and backups, starting with Hippius. |
-| **Kaspa** | Records your identity and fingerprints of your messages, so their order and authorship can be checked. |
-| **Bittensor subnet 27** | Recruits the operators who run relays, indexes and storage, checks their work, and pays them. |
-| **Komms Systems** | The company: builds the apps, sells plans and runs the services listed in [What the team still runs](what-we-run.md). |
+| Your device | Holds keys, encrypts private content and signs messages |
+| Relay | Delivers signed envelopes before their identifiers are anchored |
+| Index | Derives identity and anchor state from Kaspa and serves queries |
+| Storage | Retains encrypted objects and history segments within their paid retention period |
+| Kaspa | Orders identity transitions, governance and commitments to message identifiers |
+| Bittensor | Allocates subnet emissions using validator weights |
+| Komms Systems | Builds the apps and operates the launch services listed in the dependency inventory |
 
-## Two lanes: fast delivery, slow proof
+## Delivery and proof
 
-Komms keeps two lanes separate:
+Messages, replies, edits, reactions and moderation travel off chain. Relays deliver signed envelopes, allowing recipients to read a message before it is anchored. Later, an identity spend on Kaspa commits to a batch of identifiers.
 
-- **Messages, replies, edits, reactions and moderation** travel off-chain through relays, so they're instant. They reach Kaspa only as fingerprints, in batches. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md).
-- **Identity changes and membership of private conversations** go on Kaspa itself, where everyone sees one agreed order.
+Identity changes and private-conversation control events use the ordered control plane. Public governance and clear MLS handshakes can reveal membership, although private message bodies remain encrypted. See [Message delivery and anchoring](../security-and-privacy/delivery-and-anchoring.md) and [What others can see](../security-and-privacy/what-others-can-see.md).
 
-## Your identity lives on Kaspa
+## Identity and verification
 
-Your account's identity is a small contract on the Kaspa network that only your keys can change. Komms can't take it over or edit it. Your history is a chain of anchors that anyone can check against that identity.
+An identity is held in a Kaspa covenant. Its owner and recovery keys authorise the relevant state transitions. Komms does not hold a key that grants control over a user's identity.
 
-## Who runs the network
+Verifiers reconstruct the history against the pinned template and node state. A successful live check requires an open author identity and the necessary records. This independent verification flow is planned. Its proposed public records store would depend on the launch publisher and paid storage provider; credential-free retrieval has not yet been qualified.
 
-Operators run Komms services and are paid through [Bittensor subnet 27](https://taostats.io/subnets/27):
+## Operators and incentives
 
-- **Miners** run a Kaspa node plus Komms services: indexing (tracking identities and anchors), storing, and relaying messages.
-- **Validators** check miners' work against Kaspa, with test messages and spot checks, and set how rewards are shared.
+Miners run a Kaspa node and the Komms capabilities they advertise. Validators derive their own chain view, probe miners and submit weights. The initial scoring stage is index-only; a planned capability receives no credit merely because an operator advertises it.
 
-A miner that sponsors an anchor pays the small Kaspa fee up front. At least a quarter of subscription revenue purchases subnet 27 alpha, and miners are repaid from that alpha at the cost of the fees they paid. The subnet's emissions are a separate reward for scored work. Paying customers fund the fee repayment. Emissions are not Komms revenue. See [Mining on Komms](../mining-and-validating/mining.md).
+Native emissions reward scored work. Audited sponsored-fee repayment uses a separate operator-program alpha pot. The adopted funding policy allocates 25% of previous-month gross revenue to alpha purchases for that programme. These are distinct flows, and neither emissions nor repayment funding is guaranteed. See [Incentives and funding](incentives.md).
 
-## Checking for yourself
+## Read further
 
-Your app doesn't trust any single operator. It reads from more than one and checks the answers against Kaspa. A message only shows as **Verified** when your own node, or nodes run by two independent operators, agree.
-
-## Going deeper
-
-- [Whitepaper and papers](papers.md)
-- [Roadmap](roadmap.md)
 - [Network status](network-status.md)
+- [Evidence and claim boundaries](evidence.md)
+- [Whitepaper and papers](papers.md)
+- [Mining](../mining-and-validating/mining.md) and [validating](../mining-and-validating/validating.md)

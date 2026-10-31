@@ -1,43 +1,40 @@
 # Mining on Komms
 
-What Komms miners do on Bittensor subnet 27, how they're scored and paid, and how to join the waitlist while onboarding opens.
+What a Komms miner provides, how work is measured and what an operator must qualify before serving users.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
 > [!NOTE]
-> **Coming soon.** We'll be releasing the miner onboarding process soon. We're onboarding a small first group of miners to test the set-up end to end before we publish the guide. **[Join the miner waitlist](https://komms.app/?intent=miner&src=docs-mining#start)** and we'll tell you as soon as it opens.
+> General onboarding is not open yet. The turnkey package is still being qualified with initial operators. Do not send funds or register a hotkey based on this guide. [Network status](../network/network-status.md) records readiness.
 
-## What miners do
+## The work
 
-A Komms miner runs a Kaspa node and Komms services, in one or more roles:
+A miner runs a Kaspa node and Komms services. The architecture separates **indexing**, **storage** and **serving** so each capability can be measured. Proving and paid RPC are roadmap work.
 
-| Role | What it does |
-| --- | --- |
-| Index | Follows Kaspa, tracks every Komms identity and anchor, and serves verified history |
-| Store | Holds encrypted messages, history backups and files, and proves it still has them |
-| Serve | Relays messages between people, and sponsors their anchors on Kaspa |
+The initial incentive stage scores index correctness. Storage and serving receive no score until their own probes and budgets are enabled and qualified. Running extra software is not, by itself, evidence of rewarded work.
 
-## How miners are scored
+Validators compare answers with their own Kaspa nodes and use bounded probes. A miner must provide correct data, persist required state and recover without silently losing accepted work.
 
-Validators test miners continuously against what Kaspa says is true:
+## Rewards and costs
 
-- **Correctness:** answers must match the chain.
-- **Availability:** stored data must be there when it's asked for, within a deadline.
-- **Delivery:** test messages must arrive, in order, and be settled.
-- **Honest sponsorship:** every anchor a miner sponsors is audited from chain data.
+Bittensor emissions reward measured work according to validator weights and chain rules. The planned launch programme would separately audit sponsored Kaspa costs and repay accepted claims in alpha from an operator-program pot. Operating repayments have not been established. A probe stipend is also separate from customer demand. See [Incentives and funding](../network/incentives.md).
 
-Failing a critical check can't be made up for by doing well on another. Message volume, fees and a miner's KAS balance are never part of the score. New roles are scored only once their tests are switched on, and the miner docs will say which stage is live.
+Emissions, alpha price, claim acceptance and liquidity are variable. Komms does not promise a fixed return, cost coverage or repayment from emissions. Operators need a spending limit, a funded Kaspa wallet and enough resources to remain online while claims are reviewed.
 
-## How miners are paid
+## What turnkey setup must cover
 
-- **Fee repayment.** A miner that sponsors anchors pays the Kaspa fees up front. At least a quarter of subscription revenue purchases subnet 27 alpha, and miners are repaid from that alpha at the cost of those fees, against a published ledger.
-- **Rewards** come from subnet 27 emissions, shared according to validators' scores. That reward is separate from fee repayment. Emissions are not Komms revenue.
-- **What is live.** Scoring has been run on the Bittensor test network. This page does not claim that registering on subnet 27 today earns Komms rewards. The launch requirement is on [Network status](../network/network-status.md).
+The release package must pin its source and binaries, verify prerequisites and explain every action before starting a spending service. It must support:
 
-## What you'll need
+- A synced Kaspa node and verified network selection
+- Hotkey registration and endpoint publication on the intended Bittensor network
+- Explicit activation state, persistent index and broadcast data, and bounded sponsor spending
+- Export of auditable sponsored-cost claims without exposing private keys
+- Health checks, actionable logs, upgrades, restart and host-loss restoration
 
-Hardware and set-up details will be published with the guide. Expect a Linux server able to run a Kaspa node, with a static IP.
+A binary being present is not an upgrade check. A fresh database starting successfully is not proof that the previous host's accepted work was restored. Qualification must exercise those cases.
 
-## Get notified
+Hardware requirements, firewall rules, supported systems and exact installation commands will be published with the qualified package. Kaspa node synchronisation can take hours; installation completion is not node readiness.
 
-**[Join the miner waitlist](https://komms.app/?intent=miner&src=docs-mining#start)**. Subnet 27 on Taostats: [taostats.io/subnets/27](https://taostats.io/subnets/27).
+## Initial operators
+
+Contact [info@komms.app](mailto:info@komms.app) with your operating experience and proposed host. Do not include seeds, keys or wallet files. The [subnet website](https://komms-landing-landing-page.up.railway.app/subnet.html) provides the project overview; it is not an installer or registration instruction.

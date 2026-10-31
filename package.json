@@ -1,0 +1,19 @@
+{
+  "name": "komms-docs",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "github-slugger": "2.0.0",
+    "markdownlint": "0.42.0",
+    "mdast-util-to-string": "4.0.0",
+    "remark": "15.0.1",
+    "remark-gfm": "4.0.1"
+  },
+  "overrides": {
+    "katex": "0.18.2"
+  }
+}

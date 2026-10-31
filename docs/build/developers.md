@@ -5,11 +5,11 @@ Komms Publish, Komms RPC and the protocol for builders. Coming after launch.
 *Updated 21 October 2026*
 
 > [!NOTE]
-> **Coming soon.** Developer tools arrive after launch. **[Join the developer waitlist](https://komms.app/?intent=builder&src=docs-developers#start)** to hear first.
+> **Coming soon.** Developer tools arrive after launch. Contact [info@komms.app](mailto:info@komms.app) to discuss a proposed integration.
 
 ## Komms Publish
 
-Register your own content type, build your own app, and let the Komms network order, index, store and serve your content. The same proofs that protect Komms messages protect your app's data.
+The proposed service lets another application register content types and use Komms ordering, indexing, storage and serving. Its interface, access policy and commercial release still require qualification.
 
 ## Komms RPC
 

@@ -1,12 +1,15 @@
 # Your Komms wallet
 
-A built-in Kaspa wallet to see your balance, receive and send KAS, and pay network fees yourself if you want to.
+The planned built-in Kaspa wallet for balances, receiving and sending KAS, and user-paid network fees.
 
-*Updated 22 October 2026*
+*Updated 30 October 2026*
 
-Every Komms account has a built-in Kaspa wallet. You don't need to use it: Komms covers the network costs of everyday messaging. It's there for people who want it.
+> [!NOTE]
+> This guide describes wallet design targets, not a released public-beta wallet or mainnet send capability. See [Network status](../network/network-status.md) for availability and qualification.
 
-## What the wallet does
+The public-beta design includes an optional built-in Kaspa wallet. Everyday messaging is intended to use sponsored network fees within the launch policy.
+
+## Planned wallet functions
 
 - Shows your **KAS balance**
 - **Receive** KAS to your Komms address
@@ -15,12 +18,12 @@ Every Komms account has a built-in Kaspa wallet. You don't need to use it: Komms
 
 ## Paying network fees yourself
 
-Normally an operator pays the small Kaspa fee to anchor your messages, and is repaid at that cost. If you hold KAS, your app can pay for an anchor itself at any time. That means nobody can keep you off the network by refusing to sponsor you.
+In the launch design, an operator fronts the fee within the sponsorship policy. The planned operator programme repays eligible audited costs separately from emissions; see [Incentives and funding](../network/incentives.md). A user-paid anchor removes the need for a sponsor's fee payment, but still depends on valid state, connectivity and node acceptance.
 
 ## Paying for plans in KAS
 
-Paying for plans in KAS is **coming soon**. At launch, plans are paid by card on the web.
+Team and Community plans payable by card or KAS on the web are **available soon**. Nothing is purchasable yet. See [Plans and pricing](../getting-started/plans-and-pricing.md).
 
 ## Keep it safe
 
-Your wallet is controlled by the same keys as your account. Anyone with your [recovery kit](../security-and-privacy/recovery-kit.md) controls your wallet too.
+Your wallet balance requires its wallet keys. The [recovery kit](../security-and-privacy/recovery-kit.md) contains a recovery secret independent of the master seed. In the recovery design, it authorises taking over the identity and directing its covenant value on close. The kit alone does not restore or control separate wallet funds. Keep the wallet keys or their seed backup safe as well; planned fresh-seed identity recovery does not recover that balance.

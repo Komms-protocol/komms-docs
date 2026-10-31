@@ -1,41 +1,44 @@
 # Export your history
 
-Download a complete copy of your conversations that you, or anyone you share it with, can check against the Kaspa network.
+The planned full private-history export and its verification limits.
 
-*Updated 21 October 2026*
+*Updated 30 October 2026*
 
-You can export everything your app holds, on any plan, at any time, including when a plan has lapsed.
+> [!NOTE]
+> Full private-history export is planned, not available. Current public-channel JSON export is not a complete private-history archive. The rest of this guide describes the intended export design. See [Network status](../network/network-status.md) for availability.
+
+Once released, full private-history export is intended to be available on every plan, including during a paid plan's read-only period. An export contains only what your device can retrieve; it cannot recreate missing messages, expired files or unavailable keys.
 
 ## What's in an export
 
-- Your messages, and the messages of others that your device holds
-- The records that tie each person's messages to their anchors on Kaspa
-- The result of checking each item
+- Messages and files available to your device
+- Identity and anchor records needed to check those messages
+- Each item's recorded verification result and its observation context
 
-## Checking an export
+## Offline and fresh checks
 
-An export can be checked offline, to confirm nothing in it was changed. With access to the Kaspa network (your own node, or nodes run by two independent operators), it can also be checked against each author's live identity.
+Offline checks can test the included signatures and record consistency. They cannot establish today's live identity state or detect every omission from an archive.
 
-Each item carries one of these results:
+A fresh network check also needs the required public records, a pinned covenant template and node access while the author's identity remains open. Verification uses your own node or two independently operated nodes. One node gives a weaker observation.
 
 | Result | Meaning |
 | --- | --- |
-| Verified | Confirmed by your own node or by two independent operators |
-| Single node | Confirmed by one node only, a weaker result |
-| Cannot check | The network couldn't be reached to check it |
-| Not found | No matching record was found |
-| Failed | The records don't add up: the identity's first record was rejected, its history is broken, or the key isn't tied to a live identity |
+| Verified | The required checks succeeded using your own node or two independent operators |
+| Single node | A check based on one operator only |
+| Cannot check | Required network state, records or other evidence are unavailable |
+| Not found | No matching record was found in the queried source |
+| Failed | The supplied records fail the required consistency or authorisation checks |
 
-A check proves who signed a message and its place in the author's history. It doesn't prove the exact time it was sent, which device sent it, or that the person holding the key was its rightful owner.
+Closing an identity prevents a fresh successful live-identity check. A result recorded before closure remains an earlier observation, not proof of current state. Full private-history export is not available, so do not close an identity in reliance on that planned feature. See [Close your account](close-your-account.md).
 
-## Backups of your history
+A successful check establishes the signature and place in the author's anchored history. It does not establish exact send time, physical device or rightful key ownership.
 
-Komms backs up your history by default, encrypted with a key that comes from your recovery kit. That means you can get your history back on a new device. It also means that someone who steals your recovery kit could open that backup. See [Your recovery kit](../security-and-privacy/recovery-kit.md).
+## Backups and keys
 
-Workspace and server admins can set a backup policy for their conversations, and the apps follow it.
+History-backup keys derive from the device's master seed. A recovery kit contains a separate recovery secret. Recovery of identity control onto a new master seed is planned, not shipped; the kit cannot decrypt old history by itself. Restoring an old backup requires its archive key and retained data. See [Your recovery kit](../security-and-privacy/recovery-kit.md).
 
-## What an export can't do
+Workspace and server backup policies govern which conversation data clients back up. When full export is released, keep a separate export for important records and protect it: a readable export can disclose conversation content to whoever receives it.
 
-- Bring back files that were already removed after a plan lapsed
-- Restore messages that no device of yours ever received
-- Erase copies held by other people
+## Limits
+
+An export cannot recover files already deleted after a plan lapse, messages no device of yours received, or records no longer available from storage. It also cannot erase copies held by other people.
