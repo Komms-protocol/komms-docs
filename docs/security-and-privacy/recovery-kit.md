@@ -34,7 +34,9 @@ Replacement needs a deposit, returned on confirmation, and user-paid network fee
 
 ## Exposed kit or compromised device
 
-If you still hold both the current kit and owner key, the protocol supports replacing the recovery key immediately using both signatures. A compromised device also exposes its master seed: recovering onto a fresh seed is required to remove that access. Rotating to another key derived from the exposed seed is insufficient.
+If your master seed is exposed, create a new identity with a new master seed until fresh-seed recovery is released and qualified. Rotating to another key derived from the exposed seed is insufficient to remove the attacker's access.
+
+For an exposed recovery kit, the planned procedure allows immediate replacement of the recovery key using both the current kit and owner key. Replacing the recovery key alone does not resolve an exposed master seed.
 
 These are sensitive account operations. Do not rely on the planned fresh-seed recovery flow until it is released and qualified. [Contact Komms](mailto:info@komms.app) for help, without sending any secret material.
 

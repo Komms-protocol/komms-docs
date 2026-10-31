@@ -24,10 +24,13 @@ in a server. The planned product combines channels, direct messages and files,
 with passkey sign-in and pricing per workspace or server rather than per seat.
 Private message bodies are encrypted on the user's device.
 
-Product activity creates the infrastructure workload: relays deliver signed
-messages, indexers track identity and anchoring state, and storage operators
-retain encrypted objects. Kaspa records identity changes and message
-commitments. The message body stays off chain.
+In the planned off-chain runtime, product activity would create the
+infrastructure workload: relays would deliver signed messages, indexers would
+track identity and anchoring state, and storage operators would retain
+encrypted objects. Kaspa would record identity changes and message commitments,
+with message bodies kept off chain. On testnet today, message events submit to
+Kaspa, including inline direct-message ciphertext and public-channel messages.
+The planned runtime is not a description of current testnet message storage.
 
 The first release focuses on messaging. Calls, mobile apps, developer services
 and proving are separate roadmap stages. See the [product guides](docs/README.md)

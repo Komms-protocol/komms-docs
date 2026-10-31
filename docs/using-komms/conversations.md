@@ -1,6 +1,6 @@
 # Channels, messages and replies
 
-How conversations work in Komms, from channels and threads of replies to edits, deletes, reactions and pins.
+How conversations work in Komms, from channels and replies to edits, deletes, reactions and pins.
 
 *Updated 22 October 2026*
 

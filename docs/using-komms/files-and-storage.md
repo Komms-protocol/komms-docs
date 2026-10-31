@@ -47,7 +47,7 @@ Members see the workspace's storage use, rounded, and their own contribution exa
 
 ## If a paid plan ends
 
-1. If a yearly plan isn't renewed, storage becomes **read-only for 90 days** (14 days after a card payment is disputed). The design preserves read access to retained data during that period. Full private-history export is planned, not available.
+1. Under the planned lapse policy, if any paid plan lapses, whether billed yearly or monthly, storage becomes **read-only for 90 days**. A card payment dispute has a separate **14-day read-only period**. The design preserves read access to retained data during that period. Full private-history export is planned, not available.
 2. Renewing during that window restores everything as it was.
 3. After the window, the **oldest files are removed first** until the workspace fits the free allowance. The workspace then carries on as a free one.
 

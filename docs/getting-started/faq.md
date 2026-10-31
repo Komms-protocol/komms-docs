@@ -17,7 +17,7 @@ Private channels, direct messages and group chats have testnet end-to-end encryp
 
 ## Where is my data stored?
 
-Private-conversation files are encrypted before storage. Current storage evidence is a Komms-managed Hippius account with a same-host mirror, and relay operation is team-run testnet work. Independent storage and relay operation are not qualified. Kaspa holds proof of the order of events, not the messages themselves. See [How Komms works](../network/how-komms-works.md).
+Private-conversation files are encrypted before storage. Current storage evidence is a Komms-managed Hippius account with a same-host mirror, and relay operation is team-run testnet work. Independent storage and relay operation are not qualified. On testnet today, message events submit to Kaspa, including inline direct-message ciphertext and public-channel messages. Keeping message bodies off chain while recording commitments on Kaspa is the planned runtime. See [How Komms works](../network/how-komms-works.md).
 
 ## Is there a per-seat fee or a member limit?
 

@@ -1,11 +1,11 @@
 # What others can see
 
-The information visible to members, network operators and services in the public-beta design.
+The information visible on testnet today and the planned public-beta privacy boundary.
 
 *Updated 22 October 2026*
 
 > [!NOTE]
-> This is the design's privacy boundary. See [Network status](../network/network-status.md) for deployment status. Encryption protects private content; it does not hide all membership or activity information.
+> The table below describes the planned privacy boundary. On testnet today, stored objects can be retrieved anonymously by content ID; the planned signed-request policy is not the current access boundary. See [Network status](../network/network-status.md) for deployment status. Encryption protects private content; it does not hide all membership or activity information.
 
 ## Observer boundaries
 
@@ -17,13 +17,14 @@ The information visible to members, network operators and services in the public
 | Storage provider | Stored objects, their sizes and access timing; private-content objects are encrypted |
 | Upload front | IP address, connection metadata and byte counts; a TLS pass-through front does not read the encrypted HTTP body, but a service terminating TLS can |
 | Public Kaspa node queried | Requesting IP address and queried addresses or state, unless the requester adds its own network privacy protection |
-| Admitted operator or validator | Clear headers and ciphertext fetched for audit or replication; knowing a direct-message or group identifier can permit by-identifier retrieval until a member-only read gate exists |
+| Admitted operator or rostered validator | Clear headers and ciphertext fetched by signed request for audit or replication |
+| Any admitted identity knowing a direct-message or group direct-message conversation ID | Ciphertext fetched by a signed request naming that conversation ID; a member-only read gate is not built |
 | Conversation member | Content and metadata received while authorised; copies can survive removal or deletion |
 | Public-records reader | Identity records, anchor counts and identifiers, and published state needed for verification |
 | Komms storage ledger | Object identifiers, length, storage class and pool, claiming identity, signed claim, blinded conversation tag, upload identifier, claim/expiry/release times and release reason; workspace pools also identify their creator |
 | Sign-up verification service | Submitted email, proof-of-work and verification data, timing and the attestation that binds admission to a mint |
 
-Operators do not receive private-message decryption keys through these read paths. Ciphertext access still reveals metadata and enables traffic analysis; it is not equivalent to a member-only access policy.
+Neither anonymous object retrieval today nor the planned signed-request paths give requesters private-message decryption keys. Ciphertext access still reveals metadata and enables traffic analysis; it is not equivalent to a member-only access policy.
 
 ## Conversation membership
 
